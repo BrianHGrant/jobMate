@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    # @contributions = Company.find(params[:id]).contributions.order(created_at: :asc)
+    @jobs = Company.find(params[:id]).jobs.order(priority: :desc, closing_date: :asc)
   end
 
   def new

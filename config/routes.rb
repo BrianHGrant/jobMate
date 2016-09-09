@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :contacts
   end
   resources :quotes
+  resources :jobs
 end
