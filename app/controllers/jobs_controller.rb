@@ -1,20 +1,22 @@
 class JobsController < ApplicationController
 
-  def index
-    @jobs = Job.order(priority: :desc, closing_date: :asc)
-  end
-
-  def show
-    @job = Job.find(params[:id])
-  end
+  # def index
+  #   @jobs = Job.order(priority: :desc, closing_date: :asc)
+  # end
+  #
+  # def show
+  #   @job = Job.find(params[:id])
+  # end
 
   def new
     @company = Company.find(params[:company_id])
+    @contacts = Contact.all
     @job = @company.jobs.new
   end
 
   def create
     @company = Company.find(params[:company_id])
+    @contacts = Contact.all
     @job = @company.jobs.new(job_params)
     if @job.save
       redirect_to company_path(@job.company)
@@ -48,7 +50,7 @@ class JobsController < ApplicationController
 
   private
     def job_params
-      params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority)
+      params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id)
     end
 
 end

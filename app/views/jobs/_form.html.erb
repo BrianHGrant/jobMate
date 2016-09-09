@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-sm-8 well">
-    <%= form_for @job do |f| %>
+    <%= form_for [@company, @job] do |f| %>
       <div class="form-group">
         <%= f.label :title %>
         <%= f.text_field :title, :class => "form-control" %>
@@ -23,6 +23,11 @@
         <%= f.label :priority %>
         <%= f.number_field :priority, :class => "form-control" %>
       </div>
+      <%=f.select(:contact_id) do%>
+        <% @contacts.each do |contact|%>
+          <%=content_tag(:option, contact.first_name+contact.last_name, value: contact.id)%>
+        <%end%>
+      <%end%>
       <%= f.submit "Save Job", :class => "btn btn-success" %>
     <% end %>
   </div>
