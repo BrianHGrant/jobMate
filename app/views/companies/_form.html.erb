@@ -1,0 +1,21 @@
+<%= render "layouts/errors", :object => @company %>
+
+<div class="row">
+  <div class="col-sm-8 well">
+    <%= form_for @company do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :category %>
+        <%= f.text_field :category, :class => "form-control" %>
+      </div>
+      <%= f.submit "Save Company", :class => "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
