@@ -24,12 +24,14 @@ class JobsController < ApplicationController
 
   def edit
     @company = Company.find(params[:company_id])
+    @contacts = Contact.all
     @job = @company.jobs.find(params[:id])
     render :edit
   end
 
   def update
     @company = Company.find(params[:company_id])
+    @contacts = Contact.all
     @job = @company.jobs.find(params[:id])
     if @job.update(job_params)
       redirect_to company_path(@job.company)
