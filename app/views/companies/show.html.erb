@@ -1,4 +1,5 @@
 <div class="row">
   <h1><%= @company.name %></h1>
-  
 </div>
+
+<%= link_to 'Delete', company_path(@company), :data => {:confirm => "Are you sure?", :method => "delete"} %>
