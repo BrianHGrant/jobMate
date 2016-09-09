@@ -1,12 +1,9 @@
 class JobsController < ApplicationController
 
-  # def index
-  #   @jobs = Job.order(priority: :desc, closing_date: :asc)
-  # end
-  #
-  # def show
-  #   @job = Job.find(params[:id])
-  # end
+  def show
+    @company = Company.find(params[:company_id])
+    @job = @company.jobs.find(params[:id])
+  end
 
   def new
     @company = Company.find(params[:company_id])

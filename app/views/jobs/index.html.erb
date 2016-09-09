@@ -1,9 +1,0 @@
-<h1>Jobs in your database</h1>
-
-<ul>
-  <% @jobs.each do |job| %>
-    <li><%= link_to job.title, job_path(job)%></li>
-  <%end%>
-</ul>
-
-<%= link_to "New Job", new_job_path, :class => "btn btn-success"%>

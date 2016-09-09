@@ -1,0 +1,37 @@
+<%= render "layouts/errors", :object => @contact %>
+
+<div class="row">
+  <div class="col-sm-8 well">
+    <%= form_for [@company, @contact] do |f| %>
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :telephone_field %>
+        <%= f.date_field :telephone_field, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :relationship %>
+        <%= f.text_field :relationship, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :position %>
+        <%= f.text_field :postion, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :linkedIn %>
+        <%= f.text_field :linkedIn, :class => "form-control" %>
+      </div>
+      <%= f.submit "Save Job", :class => "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
