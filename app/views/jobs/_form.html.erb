@@ -23,10 +23,15 @@
         <%= f.label :priority %>
         <%= f.number_field :priority, :class => "form-control" %>
       </div>
-      <%=f.select(:contact_id) do%>
-        <% @contacts.each do |contact|%>
-          <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
+      <% if @contacts.any? %>
+        <%=f.select(:contact_id, {:class => "contact-select"}) do%>
+          <% @contacts.each do |contact|%>
+            <%=content_tag(:option, contact.last_name+", "+contact.first_name+" - "+contact.company.name, value: contact.id)%>
+          <%end%>
+          <%=content_tag(:option, "No Contacts", value: "new-contact")%>
         <%end%>
+      <%else%>
+        <p>No contacts - To associate job with a contact add contact to database then edit the job listing</p>
       <%end%>
       <%= f.submit "Save Job", :class => "btn btn-success" %>
     <% end %>
