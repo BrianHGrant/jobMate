@@ -8,6 +8,12 @@
   <% end %>
 </ul>
 
+<ul>
+  <% @company.contacts.each do |contact| %>
+    <li><%= contact.last_name %>, <%= contact.first_name %></li>
+  <% end %>
+</ul>
+
 <p>
   <%= link_to "Add a job", new_company_job_path(@company), :class => "btn btn-primary" %>
   <%= link_to "Add a contact", new_company_contact_path(@company), :class => "btn btn-default" %>

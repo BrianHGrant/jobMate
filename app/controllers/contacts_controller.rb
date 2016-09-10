@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
     @jobs = Job.all
     @contact = @company.contacts.new(contact_params)
     if @contact.save
-      redirect_to company_path(@contact.company)
+      redirect_to company_contact_path(@contact.company, @contact)
     else
       render :new
     end
@@ -32,7 +32,8 @@ class ContactsController < ApplicationController
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.find(params[:id])
     if @contact.update(contact_params)
-      redirect_to company_path(@contact.company)
+      redirect_to
+      company_contact_path(@company, @contact)
     else
       render :edit
     end
@@ -41,6 +42,7 @@ class ContactsController < ApplicationController
   def destroy
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.find(params[:id])
+    @jobs = Company.find(params[:company_id]).jobs.order(priority: :desc, closing_date: :asc)
     @contact.destroy
     redirect_to company_path(@contact.company)
   end
