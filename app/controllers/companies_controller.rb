@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
     @jobs = Job.order(priority: :desc, closing_date: :asc)
     @contacts = Contact.all
     @companies = Company.order(name: :asc, created_at: :desc)
+    @quotes = Quote.limit(5).order("RANDOM()")
   end
 
   def show
