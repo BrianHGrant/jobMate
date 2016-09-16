@@ -1111,14 +1111,6 @@
       "/Users/Guest/Desktop/jobMate/app/controllers/application_controller.rb": [
         1,
         1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
         null
       ],
       "/Users/Guest/Desktop/jobMate/app/controllers/contacts_controller.rb": [
@@ -1253,6 +1245,6 @@
         null
       ]
     },
-    "timestamp": 1474056853
+    "timestamp": 1474064532
   }
 }

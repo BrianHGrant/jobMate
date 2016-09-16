@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-16T13:14:13-07:00">2016-09-16T13:14:13-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-16T15:22:12-07:00">2016-09-16T15:22:12-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.62%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.3
+         1.31
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>46</b> files in total.
-    <b>527</b> relevant lines. 
-    <span class="green"><b>525</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>522</b> relevant lines. 
+    <span class="green"><b>522</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#716a266d176d00cd0bbe3857a96fc10592e95a82" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">71.43 %</td>
-        <td>11</td>
-        <td>7</td>
-        <td>5</td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
         <td>2</td>
-        <td>0.7</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -529,11 +529,11 @@
         <div class="source_table" id="716a266d176d00cd0bbe3857a96fc10592e95a82">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="red">71.43 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -552,55 +552,7 @@
           <code class="ruby">  protect_from_forgery with: :exception</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  before_action :configure_permitted_parameters, if: :devise_controller?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  protected</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    def configure_permitted_parameters</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">      devise_parameter_sanitizer.permit(:sign_up, keys: [:username])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">      devise_parameter_sanitizer.permit(:account_update, keys: [:username])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -1395,7 +1347,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    @jobs = current_user.jobs.all</code>
+          <code class="ruby">    @jobs = current_user.jobs.order(closing_date: :asc, priority: :desc)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1419,7 +1371,7 @@
         <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
-          <code class="ruby">    @company = Company.find(params[:company_id])</code>
+          <code class="ruby">    @company = current_user.companies.find(params[:company_id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="9">
@@ -1557,13 +1509,13 @@
         <li class="covered" data-hits="2" data-linenumber="31">
           <span class="hits">2</span>
           
-          <code class="ruby">    @company = Company.find(params[:company_id])</code>
+          <code class="ruby">    @company = current_user.companies.find(params[:company_id])</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="32">
           <span class="hits">2</span>
           
-          <code class="ruby">    @contacts = Contact.all</code>
+          <code class="ruby">    @contacts = current_user.contacts.all</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="33">
