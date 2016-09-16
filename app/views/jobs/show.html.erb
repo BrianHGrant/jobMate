@@ -6,15 +6,17 @@
       <h3>Company: <%= @job.company.name %></h3>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-12 well">
-      <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
-      <h2>Job Contact:</h2>
-      <h4><strong>Name:</strong> <%= @job.contact.last_name %>, <%= @job.contact.first_name %></h4>
-      <h4><strong>Position:</strong> <%= @job.contact.position %></h4>
-      <h4><%= link_to 'Contact Info', contact_path(@job.contact), :class => 'btn btn-primary'%></h4>
+  <% if @job.contact.last_name%>
+    <div class="row">
+      <div class="col-sm-12 well">
+        <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
+        <h2>Job Contact:</h2>
+        <h4><strong>Name:</strong> <%= @job.contact.last_name %>, <%= @job.contact.first_name %></h4>
+        <h4><strong>Position:</strong> <%= @job.contact.position %></h4>
+        <h4><%= link_to 'Contact Info', contact_path(@job.contact), :class => 'btn btn-primary'%></h4>
+      </div>
     </div>
-  </div>
+  <%end%>
   <p class="center">  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
   <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
 <% else %>

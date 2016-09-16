@@ -29,7 +29,7 @@ This application requires:
   6. Open 'localhost:3000' in your browser
 
 * Application instructions
-  1. Your first step to adding anything into the database is to add a company profile.
+  1. Your first step to adding anything into the database is to sign up a new profile.
   2. From the company profile page you may then enter in either jobs you are interested in or contacts.
   3. Companies, contacts, and jobs may then be edited or deleted.
 
