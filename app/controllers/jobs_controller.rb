@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @jobs = Job.all
+    @jobs = current_user.jobs.all
   end
 
   def show

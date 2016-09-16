@@ -1,6 +1,10 @@
-<div class="row">
-  <h1><%= @job.title %></h1>
+<% if current_user == @job.user %>
+  <div class="row">
+    <h1><%= @job.title %></h1>
 
-  <p>  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
-  <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
-</div>
+    <p>  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
+    <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+  </div>
+<% else %>
+  <h1>You can only access your own job postings. If this job is yours please logout and login as correct user.</h1>
+<% end %>
