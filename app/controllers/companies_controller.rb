@@ -1,23 +1,27 @@
 class CompaniesController < ApplicationController
-
+  before_action :authenticate_user!, except: :index
   def index
-    @jobs = Job.order(priority: :desc, closing_date: :asc)
-    @contacts = Contact.all
-    @companies = Company.order(name: :asc, created_at: :desc)
+    if user_signed_in?
+      @jobs = current_user.jobs.order(priority: :desc, closing_date: :asc)
+      @contacts = current_user.contacts.all
+      @companies = current_user.companies.order(name: :asc, created_at: :desc)
+    else
+      @companies = Company.limit(5).order("RANDOM()")
+    end
     @quotes = Quote.limit(5).order("RANDOM()")
   end
 
   def show
-    @company = Company.find(params[:id])
-    @jobs = Company.find(params[:id]).jobs.order(priority: :desc, closing_date: :asc)
+    @company = current_user.companies.find(params[:id])
+    @jobs = current_user.companies.find(params[:id]).jobs.order(priority: :desc, closing_date: :asc)
   end
 
   def new
-    @company = Company.new
+    @company = current_user.companies.new
   end
 
   def create
-    @company = Company.new(company_params)
+    @company = current_user.companies.new(company_params)
     @company.user = current_user
     if @company.save
       flash[:notice] = "Company successfully added!"
@@ -28,11 +32,11 @@ class CompaniesController < ApplicationController
   end
 
   def edit
-    @company = Company.find(params[:id])
+    @company = current_user.companies.find(params[:id])
   end
 
   def update
-    @company= Company.find(params[:id])
+    @company= current_user.companies.find(params[:id])
     @company.user = current_user
     if @company.update(company_params)
       flash[:notice] = "Edit Successful!"
@@ -43,7 +47,7 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    @company = Company.find(params[:id])
+    @company = current_user.companies.find(params[:id])
     @company.destroy
     redirect_to companies_path
   end

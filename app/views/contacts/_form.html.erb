@@ -31,6 +31,17 @@
         <%= f.label :linkedIn %>
         <%= f.text_field :linkedIn, :class => "form-control" %>
       </div>
+      <div class="form-group">
+        <% if @companies.any? %>
+          <%=f.select(:company_id) do%>
+            <% @companies.each do |company|%>
+              <%=content_tag(:option, company.name, value: company.id)%>
+            <%end%>
+          <%end%>
+        <%else%>
+          <p>No companies currently saved. Add company then update listing if you would like to connect contact to a company.</p>
+        <%end%>
+      </div>
       <%= f.submit "Save contact", :class => "btn btn-success" %>
     <% end %>
   </div>

@@ -2,7 +2,8 @@
   <div class="col-sm-12 well">
     <h2>Your Contacts</h2>
     <% @contacts.each do |contact| %>
-      <li><%= link_to contact.last_name+", "+contact.first_name, company_contact_path(contact.company, contact)%></li>
+      <li><%= link_to contact.last_name+", "+contact.first_name, contact_path(contact)%></li>
     <%end%>
   </div>
 </div>
+<%= link_to "Add a contact", new_contact_path, :class => "btn btn-success" %>

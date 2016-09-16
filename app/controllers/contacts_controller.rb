@@ -1,61 +1,57 @@
 class ContactsController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def index
-    @contacts = Contact.order(last_name: :desc, first_name: :desc)
+    @contacts = current_user.contacts.order(last_name: :desc, first_name: :desc)
   end
 
   def show
-    @company = Company.find(params[:company_id])
-    @contact = @company.contacts.find(params[:id])
+    @contact = current_user.contacts.find(params[:id])
   end
 
   def new
-    @company = Company.find(params[:company_id])
-    @jobs = Job.all
-    @contact = @company.contacts.new
+    @companies = current_user.companies.all
+    @contact = current_user.contacts.new
   end
 
   def create
-    @company = Company.find(params[:company_id])
-    @jobs = Job.all
-    @contact = @company.contacts.new(contact_params)
+    @jobs = current_user.jobs.all
+    @contact = current_user.contacts.new(contact_params)
     @contact.user = current_user
     if @contact.save
-      redirect_to company_contact_path(@contact.company, @contact)
+      redirect_to contact_path(@contact)
     else
       render :new
     end
   end
 
   def edit
-    @company = Company.find(params[:company_id])
-    @contact = @company.contacts.find(params[:id])
+    @contact = current_user.contacts.find(params[:id])
+    @companies = current_user.companies.all
     render :edit
   end
 
   def update
-    @company = Company.find(params[:company_id])
-    @contact = @company.contacts.find(params[:id])
+    @contact = current_user.contacts.find(params[:id])
     @contact.user = current_user
     if @contact.update(contact_params)
       redirect_to
-      company_contact_path(@company, @contact)
+      contact_path(@contact)
     else
       render :edit
     end
   end
 
   def destroy
-    @company = Company.find(params[:company_id])
-    @contact = @company.contacts.find(params[:id])
-    @jobs = Company.find(params[:company_id]).jobs.order(priority: :desc, closing_date: :asc)
+    @contact = current_user.contacts.find(params[:id])
+    @jobs = current_user.jobs.order(priority: :desc, closing_date: :asc)
     @contact.destroy
-    redirect_to company_path(@contact.company)
+    redirect_to contacts_path
   end
 
   private
     def contact_params
-      params.require(:contact).permit(:last_name, :first_name, :phone, :email, :relationship, :position, :linkedIn)
+      params.require(:contact).permit(:last_name, :first_name, :phone, :email, :relationship, :position, :linkedIn, :company_id)
     end
 
 end
