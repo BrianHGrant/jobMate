@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :user do
-    
+    email 'test@test.com'
+    password '4r56tRx'
   end
   factory :quote do
     content "I think I can"

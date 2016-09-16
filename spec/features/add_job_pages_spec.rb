@@ -2,8 +2,10 @@ require 'rails_helper'
 
 describe 'the add a job process' do
   it "adds a new job" do
-    company = FactoryGirl.create(:company)
-    contact = FactoryGirl.create(:contact, company: company)
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    company = FactoryGirl.create(:company, user: user)
+    contact = FactoryGirl.create(:contact, company: company, user: user)
     visit company_path(company)
     click_on "Add a job"
     fill_in "Title", :with => 'Engineer'
@@ -17,8 +19,10 @@ describe 'the add a job process' do
   end
 
   it "gives an error when not all information is entered" do
-    company = FactoryGirl.create(:company)
-    contact = FactoryGirl.create(:contact, company: company)
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    company = FactoryGirl.create(:company, user: user)
+    contact = FactoryGirl.create(:contact, company: company, user: user)
     visit company_path(company)
     click_on "Add a job"
     fill_in "Title", :with => ''

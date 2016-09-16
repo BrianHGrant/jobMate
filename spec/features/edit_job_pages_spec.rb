@@ -2,9 +2,11 @@ require 'rails_helper'
 
 describe 'the edit a job process' do
   it "edits a job" do
-    company = FactoryGirl.create(:company)
-    contact = FactoryGirl.create(:contact, company: company)
-    job = FactoryGirl.create(:job, company: company, contact: contact)
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    company = FactoryGirl.create(:company, user: user)
+    contact = FactoryGirl.create(:contact, company: company, user: user)
+    job = FactoryGirl.create(:job, company: company, contact: contact, user: user)
     visit company_job_path(company, job)
     click_on "Edit"
     fill_in "Title", :with => 'Mechanical Engineer'
@@ -18,9 +20,11 @@ describe 'the edit a job process' do
   end
 
   it "gives an error when information is not complete" do
-    company = FactoryGirl.create(:company)
-    contact = FactoryGirl.create(:contact, company: company)
-    job = FactoryGirl.create(:job, company: company, contact: contact)
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    company = FactoryGirl.create(:company, user: user)
+    contact = FactoryGirl.create(:contact, company: company, user: user)
+    job = FactoryGirl.create(:job, company: company, contact: contact, user: user)
     visit company_job_path(company, job)
     click_on "Edit"
     fill_in "Title", :with => ''

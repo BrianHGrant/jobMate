@@ -10,3 +10,6 @@
     <%end%>
   </div>
 </div>
+<% if user_signed_in? %>
+  <%= link_to "New Company", new_company_path, :class => "btn btn-success"%>
+<% end %>
