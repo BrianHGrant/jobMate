@@ -9,6 +9,7 @@
 .center {
   text-align: center;
 }
+
 body {
   background-color: #919EB8;
   .alert {
@@ -29,21 +30,31 @@ body {
       display: flex;
       justify-content: center;
     }
-    .companies-main {
+    .user-main {
       display: flex;
       justify-content: space-between;
+      .main-page-col {
+      }
     }
-    .main-page-col {
-    }
-
-    .companies-lower {
+    .user-lower {
       display: flex;
       justify-content: space-between;
       margin: 0 5px;
     }
-
-    .contact-select {
-      color: red;
+    .job-list#heading {
+      border-bottom: 2px solid black;
     }
+    .job-list-title {
+      text-align: center;
+      h4 {
+        color: black;
+      }
+    }
+    .job-title {
+      color: blue;
+    }
+  }
+  .contact-avatar {
+    width: 100px;
   }
 }

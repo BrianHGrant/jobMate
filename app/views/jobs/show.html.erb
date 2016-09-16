@@ -1,10 +1,22 @@
 <% if current_user == @job.user %>
   <div class="row">
-    <h1><%= @job.title %></h1>
-
-    <p>  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
-    <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+    <div class="col-sm-12 well">
+      <h2 class="center"><span class="job-title"><%= @job.title %></span></h2>
+      <h3 class="pull-right">Address: <%= @job.company.address%></h3>
+      <h3>Company: <%= @job.company.name %></h3>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-sm-12 well">
+      <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
+      <h2>Job Contact:</h2>
+      <h4><strong>Name:</strong> <%= @job.contact.last_name %>, <%= @job.contact.first_name %></h4>
+      <h4><strong>Position:</strong> <%= @job.contact.position %></h4>
+      <h4><%= link_to 'Contact Info', contact_path(@job.contact), :class => 'btn btn-primary'%></h4>
+    </div>
+  </div>
+  <p class="center">  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
+  <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
 <% else %>
   <h1>You can only access your own job postings. If this job is yours please logout and login as correct user.</h1>
 <% end %>

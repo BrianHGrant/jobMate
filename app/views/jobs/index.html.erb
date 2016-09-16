@@ -1,10 +1,41 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <h2>Your job prospects:</h2>
-    <ul>
-      <% @jobs.each do |job| %>
-        <li><%= link_to job.title, company_job_path(job.company, job)%></li>
+    <h2 class="center">Your job prospects:</h2>
+    <div class="row job-list" id="heading">
+      <div class="col-sm-3 job-list-title">
+        <h3>Company</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Job Title</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Posting Date</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Closing Date</h3>
+      </div>
+    </div>
+    <% @jobs.each do |job| %>
+      <%if job.priority >=7 %>
+        <div class="row job-list alert-danger">
+      <%elsif job.priority>=5 && job.priority<7 %>
+        <div class="row job-list alert-warning">
+      <%else%>
+        <div class="row job-list">
       <%end%>
-    </ul>
+        <div class="col-sm-3 job-list-title">
+          <h4><%=job.company.name%></h4>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h4><%= link_to job.title, company_job_path(job.company, job)%></h4>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h4><%=job.posting_date%></h4>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h4><%=job.closing_date%></h4>
+        </div>
+      </div>
+    <%end%>
   </div>
 </div>

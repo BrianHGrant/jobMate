@@ -1,6 +1,6 @@
 <h1>Welcome back, <%= current_user.email %></h1>
 
-<div class="row companies-main">
+<div class="row user-main">
   <div class="col-sm-5 well main-page-col">
     <h2>Your job prospects:</h2>
     <ul>
@@ -19,7 +19,7 @@
     <%= link_to "New Company", new_company_path, :class => "btn btn-success"%>
   </div>
 </div>
-<div class="row companies-lower">
+<div class="row user-lower">
   <div class="col-sm-12 well">
     <h2>Your Contacts</h2>
     <% @contacts.each do |contact| %>

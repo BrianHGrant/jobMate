@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @contacts = current_user.contacts.order(last_name: :desc, first_name: :desc)
   end
@@ -21,6 +21,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to contact_path(@contact)
     else
+      @companies = current_user.companies.all
       render :new
     end
   end
@@ -38,6 +39,7 @@ class ContactsController < ApplicationController
       redirect_to
       contact_path(@contact)
     else
+      @companies = current_user.companies.all
       render :edit
     end
   end

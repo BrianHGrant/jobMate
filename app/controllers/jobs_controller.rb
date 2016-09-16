@@ -1,11 +1,11 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @jobs = current_user.jobs.all
+    @jobs = current_user.jobs.order(closing_date: :asc, priority: :desc)
   end
 
   def show
-    @company = Company.find(params[:company_id])
+    @company = current_user.companies.find(params[:company_id])
     @job = @company.jobs.find(params[:id])
   end
 
@@ -28,8 +28,8 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @company = Company.find(params[:company_id])
-    @contacts = Contact.all
+    @company = current_user.companies.find(params[:company_id])
+    @contacts = current_user.contacts.all
     @job = @company.jobs.find(params[:id])
     render :edit
   end

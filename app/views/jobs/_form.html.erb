@@ -26,7 +26,7 @@
       <% if @contacts.any? %>
         <%=f.select(:contact_id, {:class => "contact-select"}) do%>
           <% @contacts.each do |contact|%>
-            <%=content_tag(:option, contact.last_name+", "+contact.first_name+" - "+contact.company.name, value: contact.id)%>
+            <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
           <%end%>
           <%=content_tag(:option, "No Contacts", value: "new-contact")%>
         <%end%>
