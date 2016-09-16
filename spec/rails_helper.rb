@@ -75,7 +75,7 @@ RSpec.configure do |config|
     # config.append_after(:each) do
     #   DatabaseCleaner.clean
     # end
-  
+
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -96,6 +96,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
 end
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

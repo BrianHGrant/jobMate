@@ -19,6 +19,7 @@ class JobsController < ApplicationController
     @company = Company.find(params[:company_id])
     @contacts = Contact.all
     @job = @company.jobs.new(job_params)
+    @job.user = current_user
     if @job.save
       redirect_to company_path(@job.company)
     else
@@ -37,6 +38,7 @@ class JobsController < ApplicationController
     @company = Company.find(params[:company_id])
     @contacts = Contact.all
     @job = @company.jobs.find(params[:id])
+    @job.user = current_user
     if @job.update(job_params)
       redirect_to company_path(@job.company)
     else

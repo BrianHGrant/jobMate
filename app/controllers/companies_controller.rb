@@ -18,6 +18,7 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
+    @company.user = current_user
     if @company.save
       flash[:notice] = "Company successfully added!"
       redirect_to companies_path
@@ -32,6 +33,7 @@ class CompaniesController < ApplicationController
 
   def update
     @company= Company.find(params[:id])
+    @company.user = current_user
     if @company.update(company_params)
       flash[:notice] = "Edit Successful!"
       redirect_to companies_path

@@ -19,6 +19,7 @@ class ContactsController < ApplicationController
     @company = Company.find(params[:company_id])
     @jobs = Job.all
     @contact = @company.contacts.new(contact_params)
+    @contact.user = current_user
     if @contact.save
       redirect_to company_contact_path(@contact.company, @contact)
     else
@@ -35,6 +36,7 @@ class ContactsController < ApplicationController
   def update
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.find(params[:id])
+    @contact.user = current_user
     if @contact.update(contact_params)
       redirect_to
       company_contact_path(@company, @contact)

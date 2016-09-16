@@ -23,7 +23,8 @@ This application requires:
   4. Create Databases
     a. Run 'rails db:create'
     b. Run 'rails db:migrate'
-    c. Run 'rails db:test:prepare'
+    c. Run 'rails db:seed'
+    d. Run 'rails db:test:prepare'
   5. Run 'rails server' to start local server
   6. Open 'localhost:3000' in your browser
 

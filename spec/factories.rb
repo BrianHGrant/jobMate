@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :user do
+    
+  end
   factory :quote do
     content "I think I can"
     author  "Little Engine"

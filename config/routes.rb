@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  root :to => 'companies#index'
+  devise_for :users
+  root to: "landing#index"
   resources :companies do
     resources :jobs, :except => :index
     resources :contacts, :except => :index
   end
-  resources :quotes
   resources :contacts, :only => :index
   resources :jobs, :only => :index
+  resources :users, :only => :show
 end
