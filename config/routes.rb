@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root :to => 'companies#index'
   resources :companies do
-    resources :jobs
-    resources :contacts
+    resources :jobs, :except => :index
+    resources :contacts, :except => :index
   end
   resources :quotes
-  # resources :jobs
+  resources :contacts, :only => :index
+  resources :jobs, :only => :index
 end

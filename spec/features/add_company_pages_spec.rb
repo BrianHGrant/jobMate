@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'the add a company process' do
   it "adds a new company" do
+    FactoryGirl.create(:quote)
     visit companies_path
     click_link "New Company"
     fill_in 'Name', :with => "Portland Industries"
@@ -12,6 +13,7 @@ describe 'the add a company process' do
   end
 
   it "gives an error when no title or genre is entered" do
+    FactoryGirl.create(:quote)
     visit companies_path
     click_link "New Company"
     fill_in 'Name', :with => ""

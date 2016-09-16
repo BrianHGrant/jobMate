@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  def index
+    @contacts = Contact.order(last_name: :desc, first_name: :desc)
+  end
+
   def show
     @company = Company.find(params[:company_id])
     @contact = @company.contacts.find(params[:id])

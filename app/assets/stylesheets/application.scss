@@ -2,10 +2,39 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar {
+  background-color: #B9D989;
+  border-color: #687D4A;
+}
+
+
+body {
+  background-color: #919EB8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.companies-main {
+  display: flex;
+  justify-content: space-between;
+}
 .main-page-col {
-  margin-right: 10px;
+}
+
+.companies-lower {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
 }
 
 .contact-select {
   color: red;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
 }

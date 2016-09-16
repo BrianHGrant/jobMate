@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'the add a contact process' do
   it "adds a new contact" do
-    company = Company.create(:name => 'Portland Industries', :address => '42 SW 5th Ave', :category => "manufacturing")
+    company = FactoryGirl.create(:company)
     visit company_path(company)
     click_on "Add a contact"
     fill_in "Last name", :with => "Jean"
@@ -17,7 +17,7 @@ describe 'the add a contact process' do
   end
 
   it "gives error if contact form is incomplete" do
-    company = Company.create(:name => 'Portland Industries', :address => '42 SW 5th Ave', :category => "manufacturing")
+    company = FactoryGirl.create(:company)
     visit company_path(company)
     click_on "Add a contact"
     fill_in "Last name", :with => "Jean"

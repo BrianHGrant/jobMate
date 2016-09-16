@@ -1,6 +1,6 @@
 <h1>Welcome to jobMate</h1>
 
-<div class="row">
+<div class="row companies-main">
   <div class="col-sm-5 well main-page-col">
     <h2>Your job prospects:</h2>
     <ul>
@@ -19,7 +19,7 @@
     <%= link_to "New Company", new_company_path, :class => "btn btn-success"%>
   </div>
 </div>
-<div class="row">
+<div class="row companies-lower">
   <div class="col-sm-12 well">
     <h2>Your Contacts</h2>
     <% @contacts.each do |contact| %>
@@ -28,8 +28,8 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-offset-2 col-sm-8">
+<div class="row quote">
+  <div class="col-sm-8">
     <h5><%=@quotes.first.content%></h5>
     <h5 class="text-center">- <em><%=@quotes.first.author%></em></h5>
   </div>

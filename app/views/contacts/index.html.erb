@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-sm-12 well">
+    <h2>Your Contacts</h2>
+    <% @contacts.each do |contact| %>
+      <li><%= link_to contact.last_name+", "+contact.first_name, company_contact_path(contact.company, contact)%></li>
+    <%end%>
+  </div>
+</div>

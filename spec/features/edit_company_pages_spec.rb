@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe "the edit a company process" do
   it "edits a company" do
-    company = Company.create(:name => 'Portland Industries', :address => '42 SW 5th Ave', :category => "manufacturing")
+    FactoryGirl.create(:quote)
+    company = FactoryGirl.create(:company)
     visit company_path(company)
     click_on 'Edit'
     fill_in 'Address', :with => "89 W. 24th St, New York, NY"
@@ -11,7 +12,8 @@ describe "the edit a company process" do
   end
 
   it "gives error when no title is entered" do
-    company = Company.create(:name => 'Portland Industries', :address => '42 SW 5th Ave', :category => "manufacturing")
+    FactoryGirl.create(:quote)
+    company = FactoryGirl.create(:company)
     visit company_path(company)
     click_on 'Edit'
     fill_in 'Address', :with => ""
