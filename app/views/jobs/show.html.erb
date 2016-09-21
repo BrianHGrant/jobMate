@@ -6,7 +6,7 @@
       <h3>Company: <%= @job.company.name %></h3>
     </div>
   </div>
-  <% if @job.contact.last_name%>
+  <% if @job.contact%>
     <div class="row">
       <div class="col-sm-12 well">
         <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
