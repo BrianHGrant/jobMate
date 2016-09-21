@@ -31,6 +31,8 @@ class JobsController < ApplicationController
     @company = current_user.companies.find(params[:company_id])
     @contacts = current_user.contacts.all
     @job = @company.jobs.find(params[:id])
+    @resume = params[:resume_up]
+    @cover_letter = params[:cover_letter_up]
     render :edit
   end
 
@@ -55,7 +57,7 @@ class JobsController < ApplicationController
 
   private
     def job_params
-      params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id)
+      params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter)
     end
 
 end

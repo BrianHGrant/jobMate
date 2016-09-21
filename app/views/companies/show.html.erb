@@ -4,7 +4,7 @@
 
 <ul>
   <% @jobs.each do |job| %>
-    <li><%= job.title %></li>
+    <li><%= job.title.titleize %></li>
   <% end %>
 </ul>
 

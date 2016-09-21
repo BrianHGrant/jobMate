@@ -1,7 +1,9 @@
 <% if current_user == @job.user %>
   <div class="row">
     <div class="col-sm-12 well">
-      <h2 class="center"><span class="job-title"><%= @job.title %></span></h2>
+      <p class="pull-right">  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
+      <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+      <h2 class="center-block"><span class="job-title"><%= @job.title %></span></h2>
       <h3 class="pull-right">Address: <%= @job.company.address%></h3>
       <h3>Company: <%= @job.company.name %></h3>
     </div>
@@ -17,8 +19,39 @@
       </div>
     </div>
   <%end%>
-  <p class="center">  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
-  <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+  <div class="row">
+    <div class="col-sm-12 well">
+      <h2 class="center">Attachments</h2>
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="attachment-title center"><%= link_to 'Resume', edit_company_job_path(@company, @job, :resume_up => true) %></h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center">Upload Date</h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center"><%= link_to 'Cover Letter', edit_company_job_path(@company, @job, :cover_letter_up => true) %></h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center">Upload Date</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="attachment-title center">Resume</h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center"><%= @job.resume.updated_at %></h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center"><%= link_to 'Cover Letter', edit_company_job_path(@company, @job, :cover_letter_up => true) %></h3>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="attachment-title center">Upload Date</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 <% else %>
   <h1>You can only access your own job postings. If this job is yours please logout and login as correct user.</h1>
 <% end %>

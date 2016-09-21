@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916165255) do
+ActiveRecord::Schema.define(version: 20160921073724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,11 +45,19 @@ ActiveRecord::Schema.define(version: 20160916165255) do
     t.string   "closing_date"
     t.string   "posting_date"
     t.integer  "priority"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "company_id"
     t.integer  "contact_id"
     t.integer  "user_id"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+    t.string   "cover_letter_file_name"
+    t.string   "cover_letter_content_type"
+    t.integer  "cover_letter_file_size"
+    t.datetime "cover_letter_updated_at"
   end
 
   create_table "quotes", force: :cascade do |t|
