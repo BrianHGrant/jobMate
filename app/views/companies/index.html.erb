@@ -1,10 +1,24 @@
 <div class="row">
   <div class="col-sm-12 well">
     <% if user_signed_in? %>
-      <h2>Your Companies</h2>
+      <h2 class="center">Your Companies</h2>
     <%else%>
-      <h2>Users are now tracking positions at companies like:</h2>
+      <h2>Some companies our users are tracking:</h2>
     <%end%>
+    <div class="row company-list" id="heading">
+      <div class="col-sm-3 job-list-title">
+        <h3>Company</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Category</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Your Rating</h3>
+      </div>
+      <div class="col-sm-3 job-list-title">
+        <h3>Openings</h3>
+      </div>
+    </div>
     <% @companies.each do |company| %>
       <li><%= link_to company.name, company_path(company)%></li>
     <%end%>
