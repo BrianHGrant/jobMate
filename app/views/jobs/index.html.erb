@@ -28,7 +28,7 @@
                 <h4><%=job.company.name%></h4>
               </div>
               <div class="col-sm-3 job-list-title">
-                <h4><%= link_to job.title, company_job_path(job.company, job)%></h4>
+                <h4><%= link_to job.title.titleize, company_job_path(job.company, job)%></h4>
               </div>
               <div class="col-sm-3 job-list-title">
                 <h4><%=job.posting_date%></h4>
