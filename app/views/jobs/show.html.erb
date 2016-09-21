@@ -8,21 +8,10 @@
       <h3>Company: <%= @job.company.name %></h3>
     </div>
   </div>
-  <% if @job.contact%>
-    <div class="row">
-      <div class="col-sm-12 well">
-        <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
-        <h2>Job Contact:</h2>
-        <h4><strong>Name:</strong> <%= @job.contact.last_name %>, <%= @job.contact.first_name %></h4>
-        <h4><strong>Position:</strong> <%= @job.contact.position %></h4>
-        <h4><%= link_to 'Contact Info', contact_path(@job.contact), :class => 'btn btn-primary'%></h4>
-      </div>
-    </div>
-  <%end%>
   <div class="row">
     <div class="col-sm-12 well">
       <h2 class="center">Attachments</h2>
-      <div class="row">
+      <div class="row job-attachment-heading">
         <div class="col-sm-3">
           <h3 class="attachment-title center"><%= link_to 'Resume', edit_company_job_path(@company, @job, :resume_up => true) %></h3>
         </div>
@@ -38,20 +27,31 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          <h3 class="attachment-title center">Resume</h3>
+          <h4 class="attachment-title center"><%= link_to @job.resume_file_name, @job.resume.url %></h4>
         </div>
         <div class="col-sm-3">
-          <h3 class="attachment-title center"><%= @job.resume.updated_at %></h3>
+          <h4 class="attachment-title center"><%= @job.resume_updated_at %></h4>
         </div>
         <div class="col-sm-3">
-          <h3 class="attachment-title center"><%= link_to 'Cover Letter', edit_company_job_path(@company, @job, :cover_letter_up => true) %></h3>
+          <h4 class="attachment-title center"><%= link_to @job.cover_letter_file_name, @job.cover_letter.url %></h4>
         </div>
         <div class="col-sm-3">
-          <h3 class="attachment-title center">Upload Date</h3>
+          <h4 class="attachment-title center"><%= @job.cover_letter_updated_at %></h4>
         </div>
       </div>
     </div>
   </div>
+  <% if @job.contact%>
+    <div class="row">
+      <div class="col-sm-12 well">
+        <%= image_tag('avatar.png', :class => "contact-avatar pull-right") %>
+        <h2>Job Contact:</h2>
+        <h4><strong>Name:</strong> <%= @job.contact.last_name %>, <%= @job.contact.first_name %></h4>
+        <h4><strong>Position:</strong> <%= @job.contact.position %></h4>
+        <h4><%= link_to 'Contact Info', contact_path(@job.contact), :class => 'btn btn-primary'%></h4>
+      </div>
+    </div>
+  <%end%>
 <% else %>
   <h1>You can only access your own job postings. If this job is yours please logout and login as correct user.</h1>
 <% end %>
