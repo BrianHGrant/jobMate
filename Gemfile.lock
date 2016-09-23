@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ffaker/ffaker.git
+  revision: fe00f487d67a104de1c2cb201bf40c741ba5fff6
+  specs:
+    ffaker (2.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -239,6 +245,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   factory_girl_rails (~> 4.0)
+  ffaker!
   jbuilder (~> 2.5)
   jquery-rails
   launchy

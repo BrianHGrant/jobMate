@@ -1,7 +1,14 @@
 <div class="row">
-  <h1><%= @company.name %></h1>
+  <div class="col-sm-12 well">
+    <h1><%= @company.name %></h1>
+  </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-12 well">
+    <h2 class="center">Company Profile</h2>
+  </div>
+</div>
 <ul>
   <% @jobs.each do |job| %>
     <li><%= job.title.titleize %></li>
