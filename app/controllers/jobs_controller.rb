@@ -1,7 +1,15 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @jobs = current_user.jobs.order(closing_date: :asc, priority: :desc).page(params[:page]).per(10)
+    @search_string = params[:search_string]
+    @search_column = params[:search_column]
+    if @search_column == 'company'
+      @companies = Company.where("name ILIKE ?", "%#{@search_string}%")
+      @search_ids = @companies.ids
+      @column_id = @search_column + '_id'
+    end
+    binding.pry
+    @jobs = current_user.jobs.search(@column_id, @search_ids).order(closing_date: :asc, priority: :desc).page(params[:page]).per(10)
   end
 
   def show
