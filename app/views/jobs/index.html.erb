@@ -15,31 +15,8 @@
         <h3>Closing Date</h3>
       </div>
     </div>
-      <% if @jobs.any? %>
-        <% @jobs.each do |job| %>
-          <%if job.priority >=7 %>
-            <div class="row job-list alert-danger">
-          <%elsif job.priority>=5 && job.priority<7 %>
-            <div class="row job-list alert-warning">
-          <%else%>
-            <div class="row job-list">
-          <%end%>
-              <div class="col-sm-3 job-list-title">
-                <h4><%=job.company.name%></h4>
-              </div>
-              <div class="col-sm-3 job-list-title">
-                <h4><%= link_to job.title.titleize, company_job_path(job.company, job)%></h4>
-              </div>
-              <div class="col-sm-3 job-list-title">
-                <h4><%=job.posting_date%></h4>
-              </div>
-              <div class="col-sm-3 job-list-title">
-                <h4><%=job.closing_date%></h4>
-              </div>
-            </div>
-        <%end%>
-      <%else%>
-        <h4>You have no jobs saved, add a company to get started</h4>
-      <%end%>
+    <div class="jobs">
+      <%= render 'job' %>
+    </div>
   </div>
 </div>

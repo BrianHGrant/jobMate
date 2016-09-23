@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @jobs = current_user.jobs.order(closing_date: :asc, priority: :desc)
+    @jobs = current_user.jobs.order(closing_date: :asc, priority: :desc).page(params[:page]).per(10)
   end
 
   def show

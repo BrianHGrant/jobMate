@@ -27,7 +27,8 @@ This application requires:
     d. Run 'rails db:test:prepare'
   5. Run 'rails server' to start local server
   6. Open 'localhost:3000' in your browser
-
+  7. For testing and demo purposes an example user has been created with seed data. email: john@test.com, password: 123456
+  
 * Application instructions
   1. Your first step to adding anything into the database is to sign up a new profile.
   2. From the company profile page you may then enter in either jobs you are interested in or contacts.

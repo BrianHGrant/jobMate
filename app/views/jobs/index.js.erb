@@ -1,0 +1,3 @@
+$('.jobs').html('<%= j render "job" %>');
+
+$('#paginator').html('<%= j paginate(@jobs, :remote => true).to_s %>');

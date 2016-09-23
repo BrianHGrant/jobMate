@@ -12,9 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-  $(".contact-select").change()
-});
+// $(document).ready(function() {
+//   $('.pagination a').on("click", function() {
+//     $.getScript(this.href);
+//     return false;
+//   })
+// });
