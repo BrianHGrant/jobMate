@@ -2,13 +2,10 @@ class CompaniesController < ApplicationController
   before_action :authenticate_user!, except: :index
   def index
     if user_signed_in?
-      @jobs = current_user.jobs.order(priority: :desc, closing_date: :asc)
-      @contacts = current_user.contacts.all
-      @companies = current_user.companies.order(name: :asc, created_at: :desc)
+      @companies = current_user.companies.order(name: :asc, created_at: :desc).page(params[:page]).per(10)
     else
       @companies = Company.limit(5).order("RANDOM()")
     end
-    @quotes = Quote.limit(5).order("RANDOM()")
   end
 
   def show

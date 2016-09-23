@@ -19,22 +19,9 @@
         <h3>Openings</h3>
       </div>
     </div>
-    <% @companies.each do |company| %>
-      <div class="row company-list">
-        <div class="col-sm-3 job-list-title">
-          <h4><%= link_to company.name, company_path(company)%></h4>
-        </div>
-        <div class="col-sm-3 job-list-title">
-          <h4><%= company.category%></h4>
-        </div>
-        <div class="col-sm-3 job-list-title">
-          <h4><%= company.rating%></h4>
-        </div>
-        <div class="col-sm-3 job-list-title">
-          <h4><%= company.jobs.length%></h4>
-        </div>
-      </div>
-    <%end%>
+    <div class="companies">
+      <%= render 'company' %>
+    </div>
   </div>
 </div>
 <% if user_signed_in? %>

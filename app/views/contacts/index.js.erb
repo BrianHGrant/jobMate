@@ -1,0 +1,3 @@
+$('.contacts').html('<%= j render "contact" %>');
+
+$('#paginator').html('<%= j paginate(@contacts, :remote => true).to_s %>');

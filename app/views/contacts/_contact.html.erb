@@ -1,0 +1,5 @@
+<% @contacts.each do |contact| %>
+  <li><%= link_to contact.last_name+", "+contact.first_name, contact_path(contact)%></li>
+<%end%>
+
+<div class="center" id="paginator"><%= paginate @contacts, :remote => true  %></div>
