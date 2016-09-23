@@ -3,12 +3,18 @@ class JobsController < ApplicationController
   def index
     @search_string = params[:search_string]
     @search_column = params[:search_column]
+    @search_ids = []
     if @search_column == 'company'
       @companies = Company.where("name ILIKE ?", "%#{@search_string}%")
       @search_ids = @companies.ids
       @column_id = @search_column + '_id'
+    elsif @search_column == 'title'
+      @jobs = Job.where("title ILIKE ?",  "%#{@search_string}%")
+      @search_ids = @jobs.ids
+      @column_id = @search_column + '_id'
+    elsif @search_column == 'priority'
+      @search_ids = (@search_string.to_i..10).to_a
     end
-    binding.pry
     @jobs = current_user.jobs.search(@column_id, @search_ids).order(closing_date: :asc, priority: :desc).page(params[:page]).per(10)
   end
 

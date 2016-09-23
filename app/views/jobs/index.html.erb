@@ -3,7 +3,7 @@
     <h2 class="center">Your job prospects:</h2>
     <div class="search">
       <hr>
-      <%= form_tag(jobs_path, method: "get") do %>
+      <%= form_tag(jobs_path, method: "get", id:"job-search", remote: true) do %>
         <div class="form-group center">
           <%=select_tag(:search_column, options_for_select(['title', 'company', 'priority']), {:class => "contact-select"})%>
           <%= text_field_tag(:search_string, params[:search_string]) %>

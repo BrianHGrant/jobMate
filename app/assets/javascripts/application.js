@@ -16,9 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
-// $(document).ready(function() {
-//   $('.pagination a').on("click", function() {
-//     $.getScript(this.href);
-//     return false;
-//   })
-// });
+$(document).ready(function() {
+  $("#job-search").keyup(function() {
+    $.get($("#job-search").attr("action"), $("#job_search").serialize(), null, "script");
+    return false;
+  });
+});
