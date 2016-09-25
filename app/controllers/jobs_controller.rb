@@ -1,21 +1,25 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!
+  helper ApplicationHelper
+  helper_method :sort_column, :sort_direction
   def index
     @search_string = params[:search_string]
     @search_column = params[:search_column]
     @search_ids = []
     if @search_column == 'company'
       @companies = Company.where("name ILIKE ?", "%#{@search_string}%")
-      @search_ids = @companies.ids
-      @column_id = @search_column + '_id'
+      search_array = @companies.ids.map {|val| "#{val}"}
+      search_array.map! { |s| s.to_i }
+      @jobs = current_user.jobs.where("company_id IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     elsif @search_column == 'title'
-      @jobs = Job.where("title ILIKE ?",  "%#{@search_string}%")
-      @search_ids = @jobs.ids
-      @column_id = @search_column + '_id'
+      @jobs = Job.where("title ILIKE ?", "%#{@search_string}%").order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     elsif @search_column == 'priority'
-      @search_ids = (@search_string.to_i..10).to_a
+      search_array = (@search_string.to_i..10).to_a.map {|val| "#{val}"}
+      search_array.map! { |s| s.to_i }
+      @jobs = Job.where("priority IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+    else
+      @jobs = current_user.jobs.order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     end
-    @jobs = current_user.jobs.search(@column_id, @search_ids).order(closing_date: :asc, priority: :desc).page(params[:page]).per(10)
   end
 
   def show
@@ -70,6 +74,14 @@ class JobsController < ApplicationController
   end
 
   private
+  def sort_column
+    Job.column_names.include?(params[:sort]) ? params[:sort] : "closing_date"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+  end
+
     def job_params
       params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter)
     end

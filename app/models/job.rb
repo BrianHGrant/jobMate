@@ -10,9 +10,8 @@ class Job < ActiveRecord::Base
 
   def self.search(search_column, search_ids)
    if search_ids.any?
-     search_array = search_ids.map {|val| "#{val}"}
-     search_array.map! { |s| s.to_i }
-     where("company_id IN (?)", search_array)
+     
+     where("? IN (?)", search_column, search_array)
    else
      where(nil)
    end

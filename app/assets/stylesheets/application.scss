@@ -50,7 +50,21 @@ body {
       border-bottom: 2px solid black;
       border-left: none;
       border-right: none;
-    }
+        a:hover {
+          text-decoration: none;
+        }
+        .asc:after {
+          margin-left: 3px;
+          content:"\e113";
+          font-family:"Glyphicons Halflings";
+        }
+
+        .desc:after {
+          margin-left: 3px;
+          content:"\e114";
+          font-family:"Glyphicons Halflings";
+        }
+      }
     .job-list-title {
       text-align: center;
       h4 {
@@ -63,11 +77,11 @@ body {
     .job-attachment-heading {
       border-bottom: 2px solid black;
     }
-  }
-  .contact-avatar {
-    width: 100px;
-  }
-  .company-list#heading {
-    border-bottom: 2px solid black;
+    .contact-avatar {
+      width: 100px;
+    }
+    .company-list#heading {
+      border-bottom: 2px solid black;
+    }
   }
 }
