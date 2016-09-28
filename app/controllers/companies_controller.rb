@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
     if user_signed_in?
       @companies = current_user.companies.order(name: :asc, created_at: :desc).page(params[:page]).per(10)
     else
-      @companies = Company.limit(5).order("RANDOM()")
+      @companies = Company.limit(5).order("RANDOM()").page(params[:page]).per(10)
     end
   end
 
@@ -22,7 +22,7 @@ class CompaniesController < ApplicationController
     @company.user = current_user
     if @company.save
       flash[:notice] = "Company successfully added!"
-      redirect_to companies_path
+      redirect_to company_path(@company)
     else
       render :new
     end
@@ -51,7 +51,7 @@ class CompaniesController < ApplicationController
 
   private
   def company_params
-    params.require(:company).permit(:name, :address, :category, :user_id)
+    params.require(:company).permit(:name, :address, :category, :user_id, :domain)
   end
 
 end
