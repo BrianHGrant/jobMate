@@ -17,11 +17,11 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $("#heading h3 a").on("click", function() {
-    $.getScript(this.href);
-    return false;
-    alert("hello");
-  });
+  // $("#heading h3 a").on("click", function() {
+  //   $.getScript(this.href);
+  //   return false;
+  //   alert("hello");
+  // });
 
   $("#job-search").keyup(function() {
     $.get($("#job-search").attr("action"), $("#job_search").serialize(), null, "script");

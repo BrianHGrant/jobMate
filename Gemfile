@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'kaminari'
 gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
+gem 'database_cleaner'
 
 
 group :development, :test do
@@ -44,6 +45,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry'
+  gem 'poltergeist'
   gem 'shoulda-matchers'
   gem "factory_girl_rails", "~> 4.0"
   gem 'simplecov', require: false

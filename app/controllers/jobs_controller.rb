@@ -18,7 +18,12 @@ class JobsController < ApplicationController
       search_array.map! { |s| s.to_i }
       @jobs = Job.where("priority IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     else
+      @companies = Company.all
       @jobs = current_user.jobs.order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+    end
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
@@ -51,6 +56,7 @@ class JobsController < ApplicationController
     @job = @company.jobs.find(params[:id])
     @resume = params[:resume_up]
     @cover_letter = params[:cover_letter_up]
+    @analyze = params[:analyze]
     render :edit
   end
 
@@ -60,7 +66,7 @@ class JobsController < ApplicationController
     @job = @company.jobs.find(params[:id])
     @job.user = current_user
     if @job.update(job_params)
-      redirect_to company_path(@job.company)
+      redirect_to company_job_path(@company, @job)
     else
       render :edit
     end
@@ -79,11 +85,11 @@ class JobsController < ApplicationController
   end
 
   def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+    %w[ASC DESC].include?(params[:direction]) ? params[:direction] : "ASC"
   end
 
-    def job_params
-      params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter)
-    end
+  def job_params
+    params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter)
+  end
 
 end
