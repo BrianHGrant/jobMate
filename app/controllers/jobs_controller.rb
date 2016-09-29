@@ -7,13 +7,11 @@ class JobsController < ApplicationController
     @search_column = params[:search_column]
     if @search_column == 'company'
       @companies = Company.where("name ILIKE ?", "%#{@search}%")
-      search = @companies.ids.map {|val| "#{val}"}
-      search.map! { |s| s.to_i }
+      search = @companies.ids
     elsif @search_column == 'title'
       search = "%#{@search}%"
     elsif @search_column == 'priority'
-      search = (@search.to_i..10).to_a.map {|val| "#{val}"}
-      search.map! { |s| s.to_i }
+      search = (@search.to_i..10).to_a
     end
     @jobs = current_user.jobs.search(@search_column, search).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     respond_to do |format|
