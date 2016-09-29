@@ -8,11 +8,15 @@ class Job < ActiveRecord::Base
   has_attached_file :cover_letter
   validates_attachment :cover_letter, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
 
-  def self.search(search_column, search_array)
-   if search_column == 'company'
-     where("company_id IN (?)", search_array)
-   else
-     where(nil)
-   end
- end
+  def self.search(search_column, search)
+    if search_column == 'company'
+      where("company_id IN (?)", search)
+    elsif search_column == 'title'
+      where("title ILIKE ?", search)
+    elsif search_column == 'priority'
+      where("priority IN (?)", search)
+    else
+      where(nil)
+    end
+  end
 end

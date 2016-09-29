@@ -3,22 +3,20 @@ class JobsController < ApplicationController
   helper ApplicationHelper
   helper_method :sort_column, :sort_direction
   def index
-    @search_string = params[:search_string]
+    @search = params[:search_string]
     @search_column = params[:search_column]
     if @search_column == 'company'
-      @companies = Company.where("name ILIKE ?", "%#{@search_string}%")
-      search_array = @companies.ids.map {|val| "#{val}"}
-      search_array.map! { |s| s.to_i }
-      @jobs = current_user.jobs.search(@search_column, search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+      @companies = Company.where("name ILIKE ?", "%#{@search}%")
+      search = @companies.ids.map {|val| "#{val}"}
+      search.map! { |s| s.to_i }
     elsif @search_column == 'title'
-      @jobs = Job.where("title ILIKE ?", "%#{@search_string}%").order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+      search = "%#{@search}%"
     elsif @search_column == 'priority'
-      search_array = (@search_string.to_i..10).to_a.map {|val| "#{val}"}
-      search_array.map! { |s| s.to_i }
-      @jobs = Job.where("priority IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
-    else
-      @jobs = current_user.jobs.order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+      search = (@search.to_i..10).to_a.map {|val| "#{val}"}
+      search.map! { |s| s.to_i }
     end
+    @jobs = current_user.jobs.search(@search_column, search).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+  else
     respond_to do |format|
       format.html
       format.js

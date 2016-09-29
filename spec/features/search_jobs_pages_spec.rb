@@ -15,7 +15,6 @@ describe 'the search jobs path', js:true do
     fill_in 'search_string', with: "Bindendorf"
     click_on 'Search'
     sleep 4
-    save_and_open_screenshot
     expect(page).to have_content "Tester"
     expect(page).to have_no_content "Portland Industries"
   end
@@ -32,7 +31,6 @@ describe 'the search jobs path', js:true do
     fill_in 'search_string', with: "Tester"
     click_on 'Search'
     sleep 4
-    save_and_open_screenshot
     expect(page).to have_content "Tester"
     expect(page).to have_no_content "Engineer"
   end
