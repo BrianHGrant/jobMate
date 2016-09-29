@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <%= image_tag('https://logo.clearbit.com/' + @company.domain, :class => "contact-avatar pull-right") %>
+    <% if @company.domain != "" %>
+      <%= image_tag('https://logo.clearbit.com/' + @company.domain, :class => "pull-right img-responsive img-circle") %>
+    <% end %>
     <h1><%= @company.name %></h1>
   </div>
 </div>
@@ -8,10 +10,14 @@
   <div class="col-sm-6 well">
     <h2 class="center">Corporate Info</h2>
     <hr>
-    <h3>Founded: <%= @company.founded %></h3>
-    <h3>Number of Employees: <%= @company.size %></h3>
-    <hr>
-    <h3>Corporate Headquarters</h3>
+    <% if @company.founded %>
+      <h3>Founded: <%= @company.founded %></h3>
+      <h3>Number of Employees: <%= @company.size %></h3>
+      <hr>
+      <h3>Corporate Headquarters</h3>
+    <% else %>
+      <h3>Address</h3>
+    <% end %>
     <h4><%= @company.address %></h4>
     <h4><%= @company.city %>, <%= @company.region %></h4>
   </div>

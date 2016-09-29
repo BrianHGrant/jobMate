@@ -12,11 +12,19 @@
         <%= f.text_field :address, :class => "form-control" %>
       </div>
       <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label "State" %>
+        <%= f.text_field :region, :class => "form-control" %>
+      </div>
+      <div class="form-group">
         <%= f.label :category %>
         <%= f.text_field :category, :class => "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.label "Company website" %>
+        <%= f.label "Company Website Domain ie: bestbuy(dot)com (optional)"%>
         <%= f.text_field :domain, :class => "form-control" %>
       </div>
       <%= f.submit "Save Company", :class => "btn btn-success" %>
