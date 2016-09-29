@@ -8,10 +8,9 @@ class Job < ActiveRecord::Base
   has_attached_file :cover_letter
   validates_attachment :cover_letter, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
 
-  def self.search(search_column, search_ids)
-   if search_ids.any?
-     
-     where("? IN (?)", search_column, search_array)
+  def self.search(search_column, search_array)
+   if search_column == 'company'
+     where("company_id IN (?)", search_array)
    else
      where(nil)
    end

@@ -5,12 +5,11 @@ class JobsController < ApplicationController
   def index
     @search_string = params[:search_string]
     @search_column = params[:search_column]
-    @search_ids = []
     if @search_column == 'company'
       @companies = Company.where("name ILIKE ?", "%#{@search_string}%")
       search_array = @companies.ids.map {|val| "#{val}"}
       search_array.map! { |s| s.to_i }
-      @jobs = current_user.jobs.where("company_id IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+      @jobs = current_user.jobs.search(@search_column, search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     elsif @search_column == 'title'
       @jobs = Job.where("title ILIKE ?", "%#{@search_string}%").order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     elsif @search_column == 'priority'
@@ -18,7 +17,6 @@ class JobsController < ApplicationController
       search_array.map! { |s| s.to_i }
       @jobs = Job.where("priority IN (?)", search_array).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     else
-      @companies = Company.all
       @jobs = current_user.jobs.order(sort_column + " " + sort_direction).page(params[:page]).per(10)
     end
     respond_to do |format|

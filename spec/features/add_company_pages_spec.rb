@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the add a company process' do
+describe 'the add a company process', js:true do
   it "adds a new company" do
     FactoryGirl.create(:quote)
     user = FactoryGirl.create(:user)
