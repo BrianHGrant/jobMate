@@ -16,7 +16,6 @@ class JobsController < ApplicationController
       search.map! { |s| s.to_i }
     end
     @jobs = current_user.jobs.search(@search_column, search).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
-  else
     respond_to do |format|
       format.html
       format.js
