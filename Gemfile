@@ -36,6 +36,8 @@ gem 'devise'
 gem 'kaminari'
 gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
 gem 'database_cleaner'
+gem 'simple_form'
+gem 'rest-client'
 
 
 group :development, :test do
@@ -49,6 +51,10 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem "factory_girl_rails", "~> 4.0"
   gem 'simplecov', require: false
+  gem 'dotenv-rails'
+  gem 'rails-controller-testing'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
