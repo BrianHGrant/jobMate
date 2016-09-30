@@ -11,7 +11,10 @@ FactoryGirl.define do
   factory :company do
     name "Portland Industries"
     address '42 SW 5th Ave'
+    city 'Portland'
+    region 'OR'
     category 'manufacturing'
+    domain 'airbnb.com'
 
     factory :company_with_contacts do
       transient do

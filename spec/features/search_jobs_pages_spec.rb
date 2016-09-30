@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the search jobs path', js:true do
+describe 'the search jobs path', js:true, :vcr => true  do
   it "searches by company" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)

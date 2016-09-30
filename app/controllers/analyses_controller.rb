@@ -11,7 +11,6 @@ class AnalysesController < ApplicationController
     @analysis = Analysis.new(analysis_params)
     if @analysis.save
       render :show
-      binding.pry
     else
       render :new
     end

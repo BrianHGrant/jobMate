@@ -12,7 +12,7 @@ class Company < ActiveRecord::Base
           response = JSON.parse(RestClient::Request.new(
           method: :get,
           url: "https://api.fullcontact.com/v2/company/lookup.json",
-          headers: {params: { apiKey: "82d66c9534032f31", domain: domain}}
+          headers: {params: { apiKey: ENV['FULL_CONTACT_API_KEY'], domain: domain}}
           ).execute)
           organization = response['organization']
           contactInfo = organization['contactInfo']

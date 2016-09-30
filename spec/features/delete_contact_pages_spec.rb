@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the delete a contact process' do
+describe 'the delete a contact process', :vcr => true  do
   it "deletes a contact" do
     FactoryGirl.create(:quote)
     user = FactoryGirl.create(:user)

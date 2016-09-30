@@ -7,6 +7,10 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/poltergeist'
+require 'test/unit'
+require 'vcr'
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
 Capybara.javascript_driver = :poltergeist
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -47,6 +51,15 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  VCR.configure do |c|
+    #the directory where your cassettes will be saved
+    c.cassette_library_dir = 'spec/vcr'
+    # your HTTP request service.
+    c.hook_into :webmock
+    c.filter_sensitive_data('<full contact api key>') { ENV['FULL_CONTACT_API_KEY'] }
+  end
+
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
