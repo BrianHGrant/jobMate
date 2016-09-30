@@ -59,7 +59,6 @@ RSpec.configure do |config|
     c.configure_rspec_metadata!
     c.ignore_localhost = true
     c.filter_sensitive_data('<full contact api key>') { ENV['FULL_CONTACT_API_KEY'] }
-    c.debug_logger = File.open('vcr.log', 'w')
   end
 
 

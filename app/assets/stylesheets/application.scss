@@ -2,16 +2,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Asset variables
+$body-font: 'Andada', serif;
+$heading-font: 'Bitter', serif;
+$background-image: url('../images/inspiration-1103293.jpg');
+$text-color: #2c3e50;
 .navbar {
-  background-color: #B9D989;
-  border-color: #687D4A;
+  background-color: #60D38B;
+  border: none;
+  border-radius: none;
 }
 .center {
   text-align: center;
 }
 
+.navbar-default .navbar-nav > li > a {
+  color: $text-color;
+}
+
 body {
+  background: $background-image no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: $body-font;
   background-color: #919EB8;
+  color: $text-color;
+  .heading {
+    font-family: $heading-font;
+  }
   .alert {
     margin: 10px;
   }
@@ -47,6 +67,7 @@ body {
       border-right: 1px black solid;
     }
     .job-list#heading {
+      font-family: $heading-font;
       border-bottom: 2px solid black;
       border-left: none;
       border-right: none;
@@ -81,7 +102,11 @@ body {
       width: 100px;
     }
     .company-list#heading {
+      font-family: $heading-font;
       border-bottom: 2px solid black;
+    }
+    #select-margin {
+      margin: 0 30%;
     }
   }
 }

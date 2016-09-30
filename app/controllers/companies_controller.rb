@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :authenticate_user!, except: :index
+  helper ApplicationHelper
   def index
     if user_signed_in?
       @companies = current_user.companies.order(name: :asc, created_at: :desc).page(params[:page]).per(10)

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12 well">
-    <h2 class="center">Your job prospects:</h2>
+    <h2 class="center heading">Your job prospects:</h2>
     <div class="search">
       <hr>
       <%= form_tag(jobs_path, method: "get", id:"job-search", remote: true) do %>
@@ -14,7 +14,7 @@
       <% end %>
       <hr>
     </div>
-    <div class="row job-list" id="heading">
+    <div class="row job-list heading" id="heading">
       <div class="col-sm-3 job-list-title">
         <h3><%= sortable "company_id"%></h3>
       </div>

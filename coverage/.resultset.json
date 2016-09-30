@@ -96,7 +96,6 @@
         1,
         1,
         1,
-        22,
         1,
         null,
         null,
@@ -627,6 +626,12 @@
         16,
         16,
         null,
+        null,
+        1,
+        6,
+        6,
+        690,
+        null,
         null
       ],
       "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/factories.rb": [
@@ -1055,22 +1060,25 @@
         1,
         1,
         22,
-        21,
-        21,
+        22,
+        0,
+        0,
+        0,
         null,
         null,
         null,
         null,
-        21,
-        21,
-        21,
-        21,
-        21,
-        21,
-        21,
-        21,
-        21,
-        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -1161,6 +1169,7 @@
         null
       ],
       "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/companies_controller.rb": [
+        1,
         1,
         1,
         1,
@@ -1383,6 +1392,6 @@
         null
       ]
     },
-    "timestamp": 1475254326
+    "timestamp": 1475276778
   }
 }

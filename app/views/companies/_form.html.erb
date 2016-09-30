@@ -21,11 +21,15 @@
       </div>
       <div class="form-group">
         <%= f.label :category %>
-        <%= f.text_field :category, :class => "form-control" %>
+        <%=f.select(:category, {:class => "category-select", id: "select-margin"}) do%>
+          <% industries.each do |industry|%>
+            <%=content_tag(:option, industry)%>
+          <%end%>
+        <% end %>
       </div>
       <div class="form-group">
-        <%= f.label "Company Website Domain ie: bestbuy(dot)com (optional)"%>
-        <%= f.text_field :domain, :class => "form-control" %>
+        <%= f.label "Company Website"%>
+        <%= f.text_field :domain, :class => "form-control", :value => 'http://'%>
       </div>
       <%= f.submit "Save Company", :class => "btn btn-success" %>
     <% end %>

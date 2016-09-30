@@ -8,8 +8,8 @@ class Analysis < ActiveRecord::Base
       response = JSON.parse(RestClient::Request.new(
       method: :get,
       url: "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone",
-      user: 'f24a1b1b-8ad5-4d29-9544-ab4d1fd44f47',
-      password: "j3TBPZgUAN6T",
+      user: ENV['WATSON_USER_NUM'],
+      password: ENV['WATSON_PWORD'],
       headers: {params: { text: self.text,
       version: "2016-05-19"}}
       ).execute)
@@ -21,3 +21,5 @@ class Analysis < ActiveRecord::Base
     end
   end
 end
+
+ENV['WATSON_USER_NUM']

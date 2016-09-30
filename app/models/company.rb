@@ -7,16 +7,19 @@ class Company < ActiveRecord::Base
 
   private
   def get_company_info
-    if domain.to_s && domain != ""
+    uri = URI.parse(domain) rescue nil
+    if uri.host != nil
+      binding.pry
       begin
           response = JSON.parse(RestClient::Request.new(
           method: :get,
           url: "https://api.fullcontact.com/v2/company/lookup.json",
-          headers: {params: { apiKey: ENV['FULL_CONTACT_API_KEY'], domain: domain}}
+          headers: {params: { apiKey: ENV['FULL_CONTACT_API_KEY'], domain: uri.host}}
           ).execute)
           organization = response['organization']
           contactInfo = organization['contactInfo']
           address = contactInfo['addresses']
+          self.domain = uri.host
           self.name = organization['name']
           self.address = address[0]['addressLine1']
           self.city = address[0]['locality']

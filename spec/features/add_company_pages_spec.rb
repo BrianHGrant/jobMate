@@ -11,7 +11,7 @@ describe 'the add a company process', js:true, :vcr => true do
       fill_in 'Name', with: "Airbnb"
       fill_in 'Address', with: "89 W. 24th St"
       fill_in 'City', with: "Portland"
-      fill_in 'Category', with: 'Manufacturing'
+      select 'Internet Publishing and Broadcasting'
       click_on "Save Company"
       expect(page).to have_content "Airbnb"
     end
@@ -25,7 +25,7 @@ describe 'the add a company process', js:true, :vcr => true do
     click_link "New Company"
     fill_in 'Name', :with => ""
     fill_in 'Address', :with => "89 W. 24th St, New York, NY"
-    fill_in 'Category', :with => 'Manufacturing'
+    select 'Internet Publishing and Broadcasting'
     click_on "Save Company"
     expect(page).to have_content 'errors'
   end

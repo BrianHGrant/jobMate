@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-30T09:52:06-07:00">2016-09-30T09:52:06-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-30T16:06:18-07:00">2016-09-30T16:06:18-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.39%</span></span>
+    (<span class="covered_percent"><span class="green">97.27%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.26
+         2.93
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>48</b> files in total.
-    <b>653</b> relevant lines. 
-    <span class="green"><b>649</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>660</b> relevant lines. 
+    <span class="green"><b>642</b> lines covered</span> and
+    <span class="red"><b>18</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#6b8515a9ddb669682d776b3b9d4952f5b5d9da1a" class="src_link" title="app/controllers/companies_controller.rb">app/controllers/companies_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>57</td>
-        <td>34</td>
-        <td>34</td>
+        <td>58</td>
+        <td>35</td>
+        <td>35</td>
         <td>0</td>
         <td>2.0</td>
       </tr>
@@ -103,11 +103,11 @@
       <tr>
         <td class="strong"><a href="#da83d37f405cba672465aa09aa0cd85315968d48" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>6</td>
-        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>11.0</td>
+        <td>76.9</td>
       </tr>
       
       <tr>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#f9febc2e1e52e0e8853594ad0574a781dda5095b" class="src_link" title="app/models/company.rb">app/models/company.rb</a></td>
-        <td class="yellow strong">84.0 %</td>
-        <td>34</td>
-        <td>25</td>
-        <td>21</td>
-        <td>4</td>
-        <td>11.3</td>
+        <td class="red strong">35.71 %</td>
+        <td>37</td>
+        <td>28</td>
+        <td>10</td>
+        <td>18</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -523,11 +523,11 @@
       <tr>
         <td class="strong"><a href="#d2f483dfaff998d766d2a87f749208008d4976a5" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>96</td>
-        <td>36</td>
-        <td>36</td>
+        <td>95</td>
+        <td>35</td>
+        <td>35</td>
         <td>0</td>
-        <td>5.1</td>
+        <td>4.6</td>
       </tr>
       
     </tbody>
@@ -587,8 +587,8 @@
     <h3>app/controllers/companies_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>35</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -611,328 +611,334 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
+          <code class="ruby">  helper ApplicationHelper</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="4">
+        <li class="covered" data-hits="5" data-linenumber="5">
           <span class="hits">5</span>
           
           <code class="ruby">    if user_signed_in?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
+        <li class="covered" data-hits="4" data-linenumber="6">
           <span class="hits">4</span>
           
           <code class="ruby">      @companies = current_user.companies.order(name: :asc, created_at: :desc).page(params[:page]).per(10)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">      @companies = Company.limit(5).order(&quot;RANDOM()&quot;).page(params[:page]).per(10)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
+        <li class="covered" data-hits="9" data-linenumber="13">
           <span class="hits">9</span>
           
           <code class="ruby">    @company = current_user.companies.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="13">
+        <li class="covered" data-hits="9" data-linenumber="14">
           <span class="hits">9</span>
           
           <code class="ruby">    @jobs = current_user.companies.find(params[:id]).jobs.order(priority: :desc, closing_date: :asc)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
+        <li class="covered" data-hits="2" data-linenumber="18">
           <span class="hits">2</span>
           
           <code class="ruby">    @company = current_user.companies.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="21">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
           <code class="ruby">    @company = current_user.companies.new(company_params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
+        <li class="covered" data-hits="2" data-linenumber="23">
           <span class="hits">2</span>
           
           <code class="ruby">    @company.user = current_user</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="24">
           <span class="hits">2</span>
           
           <code class="ruby">    if @company.save</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;Company successfully added!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to company_path(@company)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">      render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="32">
+        <li class="covered" data-hits="2" data-linenumber="33">
           <span class="hits">2</span>
           
           <code class="ruby">    @company = current_user.companies.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="36">
+        <li class="covered" data-hits="2" data-linenumber="37">
           <span class="hits">2</span>
           
           <code class="ruby">    @company= current_user.companies.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
+        <li class="covered" data-hits="2" data-linenumber="38">
           <span class="hits">2</span>
           
           <code class="ruby">    @company.user = current_user</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
+        <li class="covered" data-hits="2" data-linenumber="39">
           <span class="hits">2</span>
           
           <code class="ruby">    if @company.update(company_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;Edit Successful!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to companies_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">      render :edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">    @company = current_user.companies.find(params[:id])</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">    @company.destroy</code>
+          <code class="ruby">    @company = current_user.companies.find(params[:id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">    redirect_to companies_path</code>
+          <code class="ruby">    @company.destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    redirect_to companies_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="52">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def company_params</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="54">
+        <li class="covered" data-hits="4" data-linenumber="55">
           <span class="hits">4</span>
           
           <code class="ruby">    params.require(:company).permit(:name, :address, :city, :region, :category, :user_id, :domain)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">end</code>
@@ -1913,8 +1919,8 @@
     <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1967,6 +1973,42 @@
         <li class="never" data-hits="" data-linenumber="8">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def industries</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    industries_open = File.open(&#39;./public/txt/industries.txt&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    industries = industries_open.readlines</code>
+        </li>
+      
+        <li class="covered" data-hits="690" data-linenumber="12">
+          <span class="hits">690</span>
+          
+          <code class="ruby">    industries.map! {|industry| industry.chomp }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -2013,11 +2055,11 @@
         <div class="source_table" id="f9febc2e1e52e0e8853594ad0574a781dda5095b">
   <div class="header">
     <h3>app/models/company.rb</h3>
-    <h4><span class="yellow">84.0 %</span> covered</h4>
+    <h4><span class="red">35.71 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>28</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>18</b> lines missed.</span>
     </div>
   </div>
   
@@ -2081,148 +2123,166 @@
         <li class="covered" data-hits="22" data-linenumber="10">
           <span class="hits">22</span>
           
-          <code class="ruby">    if domain.to_s &amp;&amp; domain != &quot;&quot;</code>
+          <code class="ruby">    uri = URI.parse(domain) rescue nil</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="11">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="11">
+          <span class="hits">22</span>
+          
+          <code class="ruby">    if uri.host != nil</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      binding.pry</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">      begin</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="12">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
           
           <code class="ruby">          response = JSON.parse(RestClient::Request.new(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">          method: :get,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">          url: &quot;https://api.fullcontact.com/v2/company/lookup.json&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">          headers: {params: { apiKey: ENV[&#39;FULL_CONTACT_API_KEY&#39;], domain: domain}}</code>
+          <code class="ruby">          method: :get,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
+          <code class="ruby">          url: &quot;https://api.fullcontact.com/v2/company/lookup.json&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">          headers: {params: { apiKey: ENV[&#39;FULL_CONTACT_API_KEY&#39;], domain: uri.host}}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
           <code class="ruby">          ).execute)</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="17">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">          organization = response[&#39;organization&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="18">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
           
           <code class="ruby">          contactInfo = organization[&#39;contactInfo&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="19">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">          address = contactInfo[&#39;addresses&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="20">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">          self.domain = uri.host</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
           
           <code class="ruby">          self.name = organization[&#39;name&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="21">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
           
           <code class="ruby">          self.address = address[0][&#39;addressLine1&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="22">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
           
           <code class="ruby">          self.city = address[0][&#39;locality&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="23">
-          <span class="hits">21</span>
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
           
           <code class="ruby">          region = address[0][&#39;region&#39;]</code>
-        </li>
-      
-        <li class="covered" data-hits="21" data-linenumber="24">
-          <span class="hits">21</span>
-          
-          <code class="ruby">          self.region = region[&#39;code&#39;]</code>
-        </li>
-      
-        <li class="covered" data-hits="21" data-linenumber="25">
-          <span class="hits">21</span>
-          
-          <code class="ruby">          self.founded = organization[&#39;founded&#39;].to_i</code>
-        </li>
-      
-        <li class="covered" data-hits="21" data-linenumber="26">
-          <span class="hits">21</span>
-          
-          <code class="ruby">          self.size = organization[&#39;approxEmployees&#39;].to_i</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">      rescue RestClient::BadRequest =&gt; error</code>
+          <code class="ruby">          self.region = region[&#39;code&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">        message = JSON.parse(error.response)[&#39;message&#39;]</code>
+          <code class="ruby">          self.founded = organization[&#39;founded&#39;].to_i</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby">        errors.add(:base, message)</code>
+          <code class="ruby">          self.size = organization[&#39;approxEmployees&#39;].to_i</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="30">
           
           
+          <code class="ruby">      rescue RestClient::BadRequest =&gt; error</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">        message = JSON.parse(error.response)[&#39;message&#39;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">        errors.add(:base, message)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
           <code class="ruby">        throw(:abort)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">end</code>
@@ -6023,7 +6083,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      fill_in &#39;Category&#39;, with: &#39;Manufacturing&#39;</code>
+          <code class="ruby">      select &#39;Internet Publishing and Broadcasting&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
@@ -6107,7 +6167,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;Category&#39;, :with =&gt; &#39;Manufacturing&#39;</code>
+          <code class="ruby">    select &#39;Internet Publishing and Broadcasting&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
@@ -8531,8 +8591,8 @@
     <h3>spec/rails_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>36</b> relevant lines. 
-      <span class="green"><b>36</b> lines covered</span> and
+      <b>35</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8900,22 +8960,22 @@
           <code class="ruby">    c.ignore_localhost = true</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="61">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
           
           <code class="ruby">    c.filter_sensitive_data(&#39;&lt;full contact api key&gt;&#39;) { ENV[&#39;FULL_CONTACT_API_KEY&#39;] }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">    c.debug_logger = File.open(&#39;vcr.log&#39;, &#39;w&#39;)</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
@@ -8927,190 +8987,184 @@
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # RSpec Rails can automatically mix in different behaviours to your tests</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">  # RSpec Rails can automatically mix in different behaviours to your tests</code>
+          <code class="ruby">  # based on their file location, for example enabling you to call `get` and</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">  # based on their file location, for example enabling you to call `get` and</code>
+          <code class="ruby">  # `post` in specs under `spec/controllers`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">  # `post` in specs under `spec/controllers`.</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # You can disable this behaviour by removing the line below, and instead</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">  # You can disable this behaviour by removing the line below, and instead</code>
+          <code class="ruby">  # explicitly tag your specs with their type, e.g.:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby">  # explicitly tag your specs with their type, e.g.:</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #     RSpec.describe UsersController, :type =&gt; :controller do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  #     RSpec.describe UsersController, :type =&gt; :controller do</code>
+          <code class="ruby">  #       # ...</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  #       # ...</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # The different available types are documented in the features, such as in</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">  # The different available types are documented in the features, such as in</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
           <code class="ruby">  # https://relishapp.com/rspec/rspec-rails/docs</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
           <code class="ruby">  config.infer_spec_type_from_file_location!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">  # Filter lines from Rails gems in backtraces.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">  config.filter_rails_from_backtrace!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">  # arbitrary gems may also be filtered via:</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">  # config.filter_gems_from_backtrace(&quot;gem name&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="84">
           <span class="hits">1</span>
           
           <code class="ruby">  config.include Warden::Test::Helpers</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="88">
+        <li class="covered" data-hits="43" data-linenumber="87">
           <span class="hits">43</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
           <code class="ruby">Shoulda::Matchers.configure do |config|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
           <code class="ruby">  config.integrate do |with|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="93">
+        <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
           <code class="ruby">    with.test_framework :rspec</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
           <code class="ruby">    with.library :rails</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby">end</code>

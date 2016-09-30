@@ -5,4 +5,10 @@ module ApplicationHelper
     direction = column == params[:sort] && params[:direction] == "ASC" ? "DESC" : "ASC"
     link_to title, url_for(:sort => column, :direction => direction, :page => nil), {:class => css_class}
   end
+
+  def industries
+    industries_open = File.open('./public/txt/industries.txt')
+    industries = industries_open.readlines
+    industries.map! {|industry| industry.chomp }
+  end
 end
