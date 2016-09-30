@@ -1,0 +1,13 @@
+
+<%= render "layouts/errors", :object => @analysis %>
+
+<h2>Cover Letter Text</h2>
+<div class="row well">
+  <%= form_for [@company, @job, @analysis] do |f| %>
+    <div class="field">
+      <%= f.label "Paste text of cover letter:" %>
+       <%= f.text_area :text, :cols => "50", :rows => "10", value: @job.cover_letter_text %>
+    </div>
+    <%= f.submit "Show me", :class => "btn btn-success" %>
+  <%end%>
+</div>

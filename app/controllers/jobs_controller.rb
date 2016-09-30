@@ -37,7 +37,7 @@ class JobsController < ApplicationController
     @job = @company.jobs.new(job_params)
     @job.user = current_user
     if @job.save
-      redirect_to company_path(@job.company)
+      render :show
     else
       render :new
     end
@@ -80,9 +80,9 @@ class JobsController < ApplicationController
   def sort_direction
     %w[ASC DESC].include?(params[:direction]) ? params[:direction] : "ASC"
   end
-
+private
   def job_params
-    params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter)
+    params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter, :cover_letter_text)
   end
 
 end

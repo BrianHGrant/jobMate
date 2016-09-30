@@ -13,7 +13,8 @@
       <h2 class="center">Attachments</h2>
       <div class="row job-attachment-heading">
         <div class="col-sm-3">
-          <h3 class="attachment-title center"><%= link_to 'Resume', edit_company_job_path(@company, @job, :resume_up => true) %></h3>
+          <h3 class="attachment-title center">
+            <%= link_to 'Resume', edit_company_job_path(@company, @job, :resume_up => true) %></h3>
         </div>
         <div class="col-sm-3">
           <h3 class="attachment-title center">Upload Date</h3>
@@ -27,13 +28,13 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          <h4 class="attachment-title center"><%= link_to @job.resume_file_name, @job.resume.url %></h4>
+          <h4 class="attachment-title center"><% if @job.resume_file_name %><%= link_to @job.resume_file_name, @job.resume.url %><%else%><%= link_to 'Upload', edit_company_job_path(@company, @job, :resume_up => true) %><%end%></h4>
         </div>
         <div class="col-sm-3">
           <h4 class="attachment-title center"><%= @job.resume_updated_at %></h4>
         </div>
         <div class="col-sm-3">
-          <h4 class="attachment-title center"><%= link_to @job.cover_letter_file_name, @job.cover_letter.url %></h4>
+          <h4 class="attachment-title center"><% if @job.cover_letter_file_name %><%= link_to @job.cover_letter_file_name, @job.cover_letter.url %><br><%= link_to 'Analyze Content', new_company_job_analysis_path(@company, @job), class: "btn btn-warning" %><%else%><%= link_to 'Upload', edit_company_job_path(@company, @job, :cover_letter_up => true) %><%end%></h4>
         </div>
         <div class="col-sm-3">
           <h4 class="attachment-title center"><%= @job.cover_letter_updated_at %></h4>

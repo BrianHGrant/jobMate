@@ -1,0 +1,12 @@
+<h2>Cover Letter Analysis</h2>
+<h3>The Tone of your Language:</h3>
+<% @analysis.response['document_tone']['tone_categories'][1]['tones'].each do |tone| %>
+  <p>Tone: <%= tone['tone_name'] %></p>
+  <p>Score: <%= tone['score'] %></p>
+<% end %>
+
+<h3>The Social Tone of your Language:</h3>
+<% @analysis.response['document_tone']['tone_categories'][2]['tones'].each do |tone| %>
+  <p>Tone: <%= tone['tone_name'] %></p>
+  <p>Score: <%= tone['score'] %></p>
+<% end %>

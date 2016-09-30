@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927210106) do
+ActiveRecord::Schema.define(version: 20160929230933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "analyses", force: :cascade do |t|
+    t.text "text"
+    t.text "response"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -64,6 +69,7 @@ ActiveRecord::Schema.define(version: 20160927210106) do
     t.string   "cover_letter_content_type"
     t.integer  "cover_letter_file_size"
     t.datetime "cover_letter_updated_at"
+    t.text     "cover_letter_text"
   end
 
   create_table "quotes", force: :cascade do |t|
