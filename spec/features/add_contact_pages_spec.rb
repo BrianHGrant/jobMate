@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'the add a contact process', :vcr => true do
   it "adds a new contact" do
-    usser = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     company = FactoryGirl.create(:company, user: user)
     visit company_path(company)

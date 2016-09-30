@@ -8,7 +8,7 @@ describe "the destroy a company process", :vcr => true  do
     company = FactoryGirl.create(:company, user: user)
     visit company_path(company)
     click_on 'Delete'
-    expect(page).to have_no_content "Portland Industries"
+    expect(page).to have_no_content "Airbnb"
   end
 
 end

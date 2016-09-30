@@ -10,7 +10,7 @@ describe "the edit a company process", :vcr => true  do
     click_on 'Edit'
     fill_in 'Address', :with => "89 W. 24th St, New York, NY"
     click_on "Save Company"
-    expect(page).to have_content "Portland Industries"
+    expect(page).to have_content "Airbnb"
   end
 
   it "gives error when no title is entered" do

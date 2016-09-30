@@ -7,7 +7,6 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/poltergeist'
-require 'test/unit'
 require 'vcr'
 require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
@@ -57,7 +56,10 @@ RSpec.configure do |config|
     c.cassette_library_dir = 'spec/vcr'
     # your HTTP request service.
     c.hook_into :webmock
+    c.configure_rspec_metadata!
+    c.ignore_localhost = true
     c.filter_sensitive_data('<full contact api key>') { ENV['FULL_CONTACT_API_KEY'] }
+    c.debug_logger = File.open('vcr.log', 'w')
   end
 
 

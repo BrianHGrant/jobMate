@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
+      key>&domain=airbnb.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 30 Sep 2016 16:51:09 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2031'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '51'
+      X-Rate-Limit-Reset:
+      - '55'
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        5nlhFAAA
+    http_version: 
+  recorded_at: Fri, 30 Sep 2016 16:51:09 GMT
+recorded_with: VCR 3.0.3

@@ -9,7 +9,7 @@ FactoryGirl.define do
   end
 
   factory :company do
-    name "Portland Industries"
+    name "Airbnb"
     address '42 SW 5th Ave'
     city 'Portland'
     region 'OR'
