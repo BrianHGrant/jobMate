@@ -9,7 +9,6 @@ class Company < ActiveRecord::Base
   def get_company_info
     uri = URI.parse(domain) rescue nil
     if uri.host != nil
-      binding.pry
       begin
           response = JSON.parse(RestClient::Request.new(
           method: :get,
