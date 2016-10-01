@@ -1,23 +1,23 @@
 <% if @jobs.any? %>
   <% @jobs.each do |job| %>
     <%if job.priority >=7 %>
-      <div class="row job-list alert-danger">
+      <div class="row job-list alert-high">
     <%elsif job.priority>=5 && job.priority<7 %>
-      <div class="row job-list alert-warning">
+      <div class="row job-list alert-medium">
     <%else%>
       <div class="row job-list">
     <%end%>
         <div class="col-sm-3 job-list-title">
-          <h4><%=job.company.name%></h4>
+          <h4><span class="small-screen-heading">Job Title: </span><%= link_to job.title.titleize, company_job_path(job.company, job), class: "job-titles"%></h4>
         </div>
         <div class="col-sm-3 job-list-title">
-          <h4><%= link_to job.title.titleize, company_job_path(job.company, job)%></h4>
+          <h4 class="jobs_listing"><span class="small-screen-heading">Company: </span><%=job.company.name%></h4>
         </div>
         <div class="col-sm-3 job-list-title">
-          <h4><%=job.posting_date%></h4>
+          <h4 class="jobs_listing"><span class="small-screen-heading">Posting Date: </span><%=job.posting_date%></h4>
         </div>
         <div class="col-sm-3 job-list-title">
-          <h4><%=job.closing_date%></h4>
+          <h4 class="jobs_listing"><span class="small-screen-heading">Closing Date: </span><%=job.closing_date%></h4>
         </div>
       </div>
   <%end%>

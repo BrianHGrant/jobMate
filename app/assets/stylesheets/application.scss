@@ -3,12 +3,23 @@
 @import "bootstrap";
 
 // Asset variables
+//################################
 $body-font: 'Andada', serif;
 $heading-font: 'Bitter', serif;
-$background-image: url('../images/inspiration-1103293.jpg');
-$text-color: #2c3e50;
+$background-image: url('../images/background-1430103.png');
+$text-color: #BBDDDE;
+$nav-and-btn-color: #569614;
+$small-border: 1px black solid;
+$large-border: 2px black solid;
+
+//################################
+
+a {
+  color: #FFBA80;
+}
+
 .navbar {
-  background-color: #60D38B;
+  background-color: $nav-and-btn-color;
   border: none;
   border-radius: none;
 }
@@ -19,7 +30,9 @@ $text-color: #2c3e50;
 .navbar-default .navbar-nav > li > a {
   color: $text-color;
 }
-
+a.navbar-brand {
+  color: #000036;
+}
 body {
   background: $background-image no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -27,13 +40,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: $body-font;
-  background-color: #919EB8;
   color: $text-color;
   .btn-success {
-    background-color: #60D38B;
+    background-color: #7DC0C0;
+    border: none;
   }
   .heading {
-    color: #60D38B;
+    color:  $text-color;
     font-family: $heading-font;
   }
   .landing-heading {
@@ -49,9 +62,8 @@ body {
     .landing-main {
       margin-top: 15px;
     }
-    .landing-image {
-      background-color: white;
-      border-radius: 10px;
+    .well {
+      background-color: rgba(40, 103, 4, 0.5);
     }
     .quote {
       margin-left: 20%;
@@ -59,7 +71,7 @@ body {
       margin-top: 40px;
       display: flex;
       justify-content: center;
-      background-color: rgba(96,211,139,.75);
+      color: $text-color;
       border-radius: 4px;
     }
     .user-main {
@@ -74,9 +86,10 @@ body {
       margin: 0 5px;
     }
     .job-list {
-      border-bottom: 2px black solid;
-      border-left: 1px black solid;
-      border-right: 1px black solid;
+      background-color: white;
+      border-bottom: $large-border;
+      border-left: $small-border;
+      border-right: $small-border;
     }
     .job-list#heading {
       font-family: $heading-font;
@@ -101,14 +114,27 @@ body {
     .job-list-title {
       text-align: center;
       h3 a {
-        color: black;
+        color: #617487;
       }
       h4 {
-        color: black;
+        color: #BFEDC9;
+      }
+      h4 a {
+        color: #617487;
+      }
+      .jobs_listing {
+        color: #2c3e50;
       }
     }
     .job-title {
-      color: blue;
+      color: #FFB363;
+    }
+    a.job-titles {
+      color: #008000 !important;
+      font-weight: bold;
+    }
+    a.company-names {
+      color: #FFBA80 !important;
     }
     .job-attachment-heading {
       border-bottom: 2px solid black;
@@ -121,6 +147,16 @@ body {
     .contact-avatar {
       width: 100px;
     }
+    @media only screen and (min-width: 768px) {
+      .small-screen-heading {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .job-list-title h3 {
+        display: none;
+      }
+    }
     .company-list#heading {
       font-family: $heading-font;
       border-bottom: 2px solid black;
@@ -129,4 +165,10 @@ body {
       margin: 0 30%;
     }
   }
+}
+.alert-high {
+  background-color: #FF8C80 !important;
+}
+.alert-medium {
+  background-color: #FFD280 !important;
 }
