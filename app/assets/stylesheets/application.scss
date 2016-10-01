@@ -29,7 +29,15 @@ body {
   font-family: $body-font;
   background-color: #919EB8;
   color: $text-color;
+  .btn-success {
+    background-color: #60D38B;
+  }
   .heading {
+    color: #60D38B;
+    font-family: $heading-font;
+  }
+  .landing-heading {
+    color: #2c3e50;
     font-family: $heading-font;
   }
   .alert {
@@ -46,9 +54,13 @@ body {
       border-radius: 10px;
     }
     .quote {
+      margin-left: 20%;
+      margin-right: 20%;
       margin-top: 40px;
       display: flex;
       justify-content: center;
+      background-color: rgba(96,211,139,.75);
+      border-radius: 4px;
     }
     .user-main {
       display: flex;
@@ -88,6 +100,9 @@ body {
       }
     .job-list-title {
       text-align: center;
+      h3 a {
+        color: black;
+      }
       h4 {
         color: black;
       }
@@ -98,6 +113,11 @@ body {
     .job-attachment-heading {
       border-bottom: 2px solid black;
     }
+    #linked-icon {
+      width: 75px;
+      height: 75px;
+    }
+
     .contact-avatar {
       width: 100px;
     }

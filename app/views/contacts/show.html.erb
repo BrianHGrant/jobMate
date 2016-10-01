@@ -1,6 +1,23 @@
-<div class="row">
-  <h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
 
-  <p>  <%= link_to "Edit", edit_contact_path(@contact), :class => "btn btn-warning" %>
-  <%= link_to 'Delete', contact_path(@contact), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
-</div>
+<% if current_user == @contact.user %>
+  <div class="row">
+    <div class="col-sm-offset-1 col-sm-10 well">
+      <p class="pull-right"><%= link_to "Edit", edit_contact_path(@contact), :class => "btn btn-warning" %>
+      <%= link_to 'Delete', contact_path(@contact), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+      <h2 class="center-block"><span class="job-title"><%= @contact.first_name+" "+@contact.last_name %></span></h2>
+      <h3 class="pull-right">Phone: <%= @contact.phone%></h3>
+      <h3>Email: <%= @contact.email %></h3>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-offset-1 col-sm-10 well">
+        <%= link_to image_tag('Linkedin-logo.png', id: 'linked-icon', class: "pull-right"), @contact.linkedIn  %>
+        <h2 class="center heading">Contact Details:</h2>
+        <h4><strong>Company:</strong> <%= @contact.company.name %></h4>
+        <h4><strong>Position:</strong> <%= @contact.position %></h4>
+        <h4><strong>Relationship:</strong> <%= @contact.relationship %></h4>
+      </div>
+    </div>
+<% else %>
+  <h1>You can only access your own contacts. If this contact is yours please logout and login as correct user.</h1>
+<% end %>

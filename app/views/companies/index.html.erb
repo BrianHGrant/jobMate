@@ -22,8 +22,10 @@
     <div class="companies">
       <%= render 'company' %>
     </div>
+    <div class="center">
+      <% if user_signed_in? %>
+        <%= link_to "New Company", new_company_path, :class => "btn btn-success"%>
+      <% end %>
+    </div>
   </div>
 </div>
-<% if user_signed_in? %>
-  <%= link_to "New Company", new_company_path, :class => "btn btn-success"%>
-<% end %>
