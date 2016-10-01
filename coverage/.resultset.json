@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/add_company_pages_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/add_company_pages_spec.rb": [
         1,
         null,
         1,
@@ -35,7 +35,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/rails_helper.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -132,14 +132,14 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/environment.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/application.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/application.rb": [
         1,
         null,
         1,
@@ -166,12 +166,12 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/boot.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/spring.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/spring.rb": [
         null,
         null,
         null,
@@ -179,7 +179,7 @@
         null,
         5
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/environments/test.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/environments/test.rb": [
         1,
         null,
         null,
@@ -223,7 +223,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/application_controller_renderer.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -231,7 +231,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/assets.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -244,7 +244,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/backtrace_silencers.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -253,14 +253,14 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/cookies_serializer.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/cookies_serializer.rb": [
         null,
         null,
         null,
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/devise.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -536,13 +536,13 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/filter_parameter_logging.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/inflections.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -560,7 +560,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/mime_types.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/mime_types.rb": [
         null,
         null,
         null,
@@ -571,7 +571,7 @@
         1,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/new_framework_defaults.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/new_framework_defaults.rb": [
         null,
         null,
         null,
@@ -597,12 +597,12 @@
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/session_store.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/initializers/wrap_parameters.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -618,7 +618,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/helpers/application_helper.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/helpers/application_helper.rb": [
         1,
         1,
         16,
@@ -634,7 +634,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/factories.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/factories.rb": [
         1,
         1,
         1,
@@ -679,7 +679,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/config/routes.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/config/routes.rb": [
         1,
         1,
         1,
@@ -693,7 +693,7 @@
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/user.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/user.rb": [
         1,
         null,
         null,
@@ -705,51 +705,12 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/application_record.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/add_contact_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/add_job_pages_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/add_contact_pages_spec.rb": [
         1,
         null,
         1,
@@ -788,191 +749,10 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/delete_company_pages_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/add_job_pages_spec.rb": [
         1,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/delete_contact_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/delete_job_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/edit_company_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/edit_contact_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/edit_job_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/search_jobs_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
         1,
         1,
         1,
@@ -1008,7 +788,227 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/show_companies_not_auth_pages_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/delete_company_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/delete_contact_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/delete_job_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/edit_company_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/edit_contact_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/edit_job_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/search_jobs_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/show_companies_not_auth_pages_spec.rb": [
         1,
         null,
         1,
@@ -1021,7 +1021,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/features/show_jobs_pages_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/features/show_jobs_pages_spec.rb": [
         1,
         null,
         1,
@@ -1038,7 +1038,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/models/company_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/models/company_spec.rb": [
         1,
         null,
         1,
@@ -1049,7 +1049,7 @@
         2,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/company.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/company.rb": [
         1,
         1,
         1,
@@ -1078,6 +1078,11 @@
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        null,
+        0,
         0,
         0,
         0,
@@ -1088,7 +1093,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/models/contact_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/models/contact_spec.rb": [
         1,
         null,
         1,
@@ -1103,7 +1108,7 @@
         2,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/contact.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/contact.rb": [
         1,
         1,
         1,
@@ -1111,7 +1116,7 @@
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/models/job_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/models/job_spec.rb": [
         1,
         null,
         1,
@@ -1124,7 +1129,7 @@
         2,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/job.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/job.rb": [
         1,
         1,
         1,
@@ -1148,7 +1153,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/models/quote_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/models/quote_spec.rb": [
         1,
         null,
         1,
@@ -1156,19 +1161,19 @@
         2,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/models/quote.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/models/quote.rb": [
         1,
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/spec/models/user_spec.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/companies_controller.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/controllers/companies_controller.rb": [
         1,
         1,
         1,
@@ -1228,12 +1233,12 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/application_controller.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/contacts_controller.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/controllers/contacts_controller.rb": [
         1,
         1,
         null,
@@ -1294,7 +1299,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/jobs_controller.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/controllers/jobs_controller.rb": [
         1,
         1,
         1,
@@ -1384,7 +1389,7 @@
         null,
         null
       ],
-      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/test/jobMate/app/controllers/landing_controller.rb": [
+      "/Users/briangrant/Desktop/workspace-Epicodus/rails-independent/jobMate/app/controllers/landing_controller.rb": [
         1,
         1,
         1,
@@ -1392,6 +1397,6 @@
         null
       ]
     },
-    "timestamp": 1475290480
+    "timestamp": 1475345549
   }
 }

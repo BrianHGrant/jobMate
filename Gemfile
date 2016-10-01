@@ -53,6 +53,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'vcr'
   gem 'webmock'
+  gem "skylight"
 end
 
 group :development do
