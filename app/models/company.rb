@@ -23,8 +23,13 @@ class Company < ActiveRecord::Base
           self.name = organization['name']
           self.address = address[0]['addressLine1']
           self.city = address[0]['locality']
-          region = address[0]['region']
-          self.region = region['code']
+          if address[0]['region']
+            region = address[0]['region']
+            self.region = region['code']
+          else
+            region = address[0]['country']
+            self.region = region['name']
+          end
           self.founded = organization['founded'].to_i
           self.size = organization['approxEmployees'].to_i
       rescue RestClient::BadRequest => error
