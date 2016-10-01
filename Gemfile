@@ -36,7 +36,7 @@ gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
 gem 'database_cleaner'
 gem 'simple_form'
 gem 'rest-client'
-
+gem "skylight"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +53,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'vcr'
   gem 'webmock'
-  gem "skylight"
 end
 
 group :development do
