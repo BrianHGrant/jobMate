@@ -1,5 +1,3 @@
-<p>Title: <%= doc['source']['enriched']['url']['title'] %></p>
-<p>Link: <%= doc['source']['enriched']['url']['url'] %></p>
+<p>Title: <%= link_to doc['source']['enriched']['url']['title'], doc['source']['enriched']['url']['url'] %></p>
 <p>Author: <%= doc['source']['enriched']['url']['author'] %></p>
-<p>Sentiment: <%= doc['source']['enriched']['url']['docSentiment']['type'] %></p>
 <p>Sentiment Score: <%= doc['source']['enriched']['url']['docSentiment']['score'] %></p>
