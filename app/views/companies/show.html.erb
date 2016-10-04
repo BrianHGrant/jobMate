@@ -7,22 +7,39 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-6 well">
-    <h2 class="center">Corporate Info</h2>
-    <hr>
-    <% if @company.founded %>
-      <h3>Founded: <%= @company.founded %></h3>
-      <h3>Number of Employees: <%= @company.size %></h3>
+  <div class="col-sm-6">
+    <div class="well">
+      <h2 class="center">Corporate Info</h2>
       <hr>
-      <h3>Corporate Headquarters</h3>
-    <% else %>
-      <h3>Address</h3>
-    <% end %>
-    <h4><%= @company.address %></h4>
-    <h4><%= @company.city %>, <%= @company.region %></h4>
+      <% if @company.founded %>
+        <h3>Founded: <%= @company.founded %></h3>
+        <h3>Number of Employees: <%= @company.size %></h3>
+        <hr>
+        <h3>Corporate Headquarters</h3>
+      <% else %>
+        <h3>Address</h3>
+      <% end %>
+      <h4><%= @company.address %></h4>
+      <h4><%= @company.city %>, <%= @company.region %></h4>
+    </div>
+    <div class="well">
+      <%= render 'profile', company: @company %>
+    </div>
   </div>
   <div class="col-sm-6 well">
-    <h2 class="center">Social Media</h2>
+    <h2 class="center">In the News</h2>
+    <div class="news-list">
+      <% if @company.news_response['status'] != 'ERROR' && @company.news_response['result']['docs'] %>
+        <% @company.news_response['result']['docs'].each do |doc| %>
+          <div class="well news-tile">
+            <%= render 'news-tile', doc: doc%>
+          </div>
+        <% end %>
+      <% else %>
+        <hr>
+        <h3>No news articles found</h3>
+      <% end %>
+    </div>
   </div>
 </div>
 <ul>

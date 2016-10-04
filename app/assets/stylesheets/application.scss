@@ -18,6 +18,15 @@ a {
   color: #FFBA80;
 }
 
+textarea, input {
+  color: black;
+}
+
+.job-scan {
+  display: none;
+  margin-bottom: 2em;
+}
+
 .navbar {
   background-color: $nav-and-btn-color;
   border: none;
@@ -31,7 +40,7 @@ a {
   color: $text-color;
 }
 a.navbar-brand {
-  color: #000036;
+  color: #000036 !important;
 }
 body {
   background: $background-image no-repeat center center fixed;
@@ -85,6 +94,11 @@ body {
       justify-content: space-between;
       margin: 0 5px;
     }
+
+    #watson {
+      width: 150px;
+      height: 150px;
+    }
     .job-list {
       background-color: white;
       border-bottom: $large-border;
@@ -133,6 +147,22 @@ body {
       color: #008000 !important;
       font-weight: bold;
     }
+    #compare {
+      margin-top: 10px;
+    }
+    #hide-compare {
+      margin-top: 10px;
+      display: none;
+    }
+    #analyze {
+      margin-top: 10px;
+    }
+    .job-scan {
+      padding-left: 12%;
+      .scanner {
+        background-color: green;
+      }
+    }
     a.company-names {
       color: #FFBA80 !important;
     }
@@ -160,6 +190,9 @@ body {
     .company-list#heading {
       font-family: $heading-font;
       border-bottom: 2px solid black;
+    }
+    .news-tile {
+      background-color: rgba(121, 108, 37, 0.75);
     }
     #select-margin {
       margin: 0 30%;

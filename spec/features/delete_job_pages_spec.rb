@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the delete a job process', :vcr => true  do
+describe 'the delete a job process', js:true, :vcr => true  do
   it "deletes a job" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)

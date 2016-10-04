@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the view jobs process', :vcr => true  do
+describe 'the view jobs process', js:true, :vcr => true  do
   it "shows all jobs" do
     FactoryGirl.create(:quote)
     user = FactoryGirl.create(:user)

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the edit a job process', :vcr => true  do
+describe 'the edit a job process', js:true, :vcr => true  do
   it "edits a job" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)

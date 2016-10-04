@@ -28,18 +28,38 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          <h4 class="attachment-title center"><% if @job.resume_file_name %><%= link_to @job.resume_file_name, @job.resume.url %><%else%><%= link_to 'Upload', edit_company_job_path(@company, @job, :resume_up => true) %><%end%></h4>
+          <h4 class="attachment-title center">
+            <% if @job.resume_file_name %>
+              <%= link_to @job.resume_file_name, @job.resume.url, target: "_blank" %><br>
+              <button class="btn btn-warning" id="compare">Compare Resume</button>
+              <button class="btn btn-primary" id="hide-compare">Hide JobScan</button>
+            <%else%>
+              <%= link_to 'Upload', edit_company_job_path(@company, @job, :resume_up => true) %>
+              <%end%>
+            </h4>
         </div>
         <div class="col-sm-3">
           <h4 class="attachment-title center"><%= @job.resume_updated_at %></h4>
         </div>
         <div class="col-sm-3">
-          <h4 class="attachment-title center"><% if @job.cover_letter_file_name %><%= link_to @job.cover_letter_file_name, @job.cover_letter.url %><br><%= link_to 'Analyze Content', new_company_job_analysis_path(@company, @job), class: "btn btn-warning" %><%else%><%= link_to 'Upload', edit_company_job_path(@company, @job, :cover_letter_up => true) %><%end%></h4>
+          <h4 class="attachment-title center">
+            <% if @job.cover_letter_file_name %>
+              <%= link_to @job.cover_letter_file_name, @job.cover_letter.url %><br>
+              <%= link_to 'Analyze Content', new_company_job_analysis_path(@company, @job), class: "btn btn-warning", id: "analyze" %>
+            <%else%>
+              <%= link_to 'Upload', edit_company_job_path(@company, @job, :cover_letter_up => true) %>
+            <%end%>
+          </h4>
         </div>
         <div class="col-sm-3">
           <h4 class="attachment-title center"><%= @job.cover_letter_updated_at %></h4>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 job-scan">
+      <iframe src="//jobscan.co/iframe?btncolor=f0ad4e&utm_source=jobMate&utm_medium=iframe" width="700" height="575"></iframe>
     </div>
   </div>
   <% if @job.contact%>

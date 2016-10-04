@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the add a contact process', :vcr => true do
+describe 'the add a contact process', js:true, :vcr => true do
   it "adds a new contact" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)

@@ -12,15 +12,3 @@ quotes = Quote.create([{ content: 'The most common way people give up their powe
 
 
 User.create({email: 'john@test.com', password: '123456'})
-
-30.times do
-  Company.create({name: FFaker::Company.name, address: FFaker::AddressUS.street_address, category: FFaker::Skill.specialty, rating: rand(1..5), user_id: 1})
-end
-
-30.times do
-  Contact.create({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, phone: FFaker::PhoneNumber.short_phone_number, email: FFaker::Internet.email, relationship: (['professional', 'friend', 'teacher', 'mentor', 'family']).sample, position: FFaker::Company.position, user_id: 1, company_id: rand(1..30), linkedIn: 'http://www.linkedIn.com/' })
-end
-
-60.times do
-  Job.create({title: FFaker::Job.title, post_link: FFaker::Internet.http_url, closing_date: FFaker::Time.between(30.days.ago, 30.days.from_now), posting_date: FFaker::Time.between(30.days.ago, Time.now), priority: rand(3..10), user_id: 1, company_id: rand(1..30), contact_id: rand(1..30) })
-end

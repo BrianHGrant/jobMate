@@ -1,3 +1,4 @@
+
 <h2>Cover Letter Analysis</h2>
 <h3>The Tone of your Language:</h3>
 <% @analysis.response['document_tone']['tone_categories'][1]['tones'].each do |tone| %>
@@ -10,3 +11,9 @@
   <p>Tone: <%= tone['tone_name'] %></p>
   <p>Score: <%= tone['score'] %></p>
 <% end %>
+<div class="row">
+  <div class="col-sm-offset-6 col-sm-2">
+    <h4>Powered By:</h4>
+      <%= link_to image_tag('ibm_watson.png', id: "watson"), "https://developer.ibm.com/watson/"  %>
+  </div>
+</div>

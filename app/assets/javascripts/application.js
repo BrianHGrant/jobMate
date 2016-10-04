@@ -5,7 +5,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $("#paginator a").on("click", function() {
     $.getScript(this.href);
     return false;
@@ -14,5 +14,17 @@ $(document).ready(function() {
   $("#job-search").keyup(function() {
     $.get($("#job-search").attr("action"), $("#job_search").serialize(), null, "script");
     return false;
+    event.preventDefault();
   });
+
+  $("#compare").click(function() {
+    $(".job-scan").show();
+    $("#hide-compare").show();
+    $("#compare").hide();
+  })
+  $("#hide-compare").click(function() {
+    $(".job-scan").hide();
+    $("#hide-compare").hide();
+    $("#compare").show();
+  })
 });

@@ -21,5 +21,3 @@ class Analysis < ActiveRecord::Base
     end
   end
 end
-
-ENV['WATSON_USER_NUM']
