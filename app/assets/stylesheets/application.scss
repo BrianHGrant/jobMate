@@ -22,6 +22,14 @@ textarea, input {
   color: black;
 }
 
+.devise-form {
+  margin-left: 33%;
+  padding: 10px;
+}
+
+input#user_password {
+  width: 171px;
+}
 .job-scan {
   display: none;
   margin-bottom: 2em;
@@ -35,7 +43,9 @@ textarea, input {
 .center {
   text-align: center;
 }
-
+.btn-devise {
+  margin: 10px 0;
+}
 .navbar-default .navbar-nav > li > a {
   color: $text-color;
 }
