@@ -27,9 +27,6 @@ This application requires:
   5. Create .env file (see below)
   6. Run 'rails server' to start local server
   7. Open 'localhost:3000' in your browser
-  8. For testing and demo purposes an example user has been created with seed data.
-    * email: john@test.com
-    * password: 123456
 
 ## Application instructions
   1. Your first step to adding anything into the database is to sign up a new profile.
@@ -37,15 +34,16 @@ This application requires:
   3. Companies, contacts, and jobs may then be edited or deleted.
 
 ## APIs and the .env
-  This application makes use of two external APIs. Both offer a free level of access, which should provide adequate use for testing or individual deployment of this app.
+  This application makes use of three external APIs. All offer a free level of access, which should provide adequate use for testing or individual deployment of this app.
   * <a href="https://www.fullcontact.com/developer/">Full-Contact Company API</a>
   * <a href="https://www.ibm.com/watson/developercloud/tone-analyzer.html">IBM Watson Tone Analyzer </a> - If you have not previously registered with IBM's developer cloud service, BlueMix, checkout their <a href="https://www.ibm.com/watson/developercloud/doc/getting_started/">Getting Started</a> guide.
-
+  * <a href="https://www.ibm.com/watson/developercloud/alchemy-data-news.html">Alechemey Data News API</a> - Also part of the IBM Watson ecosystem, though you will need to register for seperate api key.
 Once registered, note your Full-Contact api_key and your IBM user number and key. Create a .env file in the project root directory as follows:
 
     FULL_CONTACT_API_KEY="<YOUR_API_KEY>"
     WATSON_USER_NUM="<YOUR_IBM_USER_NUMBER>"
     WATSON_PWORD="<YOUR_IBM_USER_KEY>"
+    ALCHEMY_DATA_KEY="<YOUR_API_KEY>"
 
 Enter your actual credentials. Restart the server if it was running.
 
