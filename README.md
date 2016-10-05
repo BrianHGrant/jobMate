@@ -38,6 +38,7 @@ This application requires:
   * <a href="https://www.fullcontact.com/developer/">Full-Contact Company API</a>
   * <a href="https://www.ibm.com/watson/developercloud/tone-analyzer.html">IBM Watson Tone Analyzer </a> - If you have not previously registered with IBM's developer cloud service, BlueMix, checkout their <a href="https://www.ibm.com/watson/developercloud/doc/getting_started/">Getting Started</a> guide.
   * <a href="https://www.ibm.com/watson/developercloud/alchemy-data-news.html">Alechemey Data News API</a> - Also part of the IBM Watson ecosystem, though you will need to register for seperate api key.
+  
 Once registered, note your Full-Contact api_key and your IBM user number and key. Create a .env file in the project root directory as follows:
 
     FULL_CONTACT_API_KEY="<YOUR_API_KEY>"
