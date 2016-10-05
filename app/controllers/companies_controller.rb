@@ -31,6 +31,7 @@ class CompaniesController < ApplicationController
 
   def edit
     @company = current_user.companies.find(params[:id])
+    @update = params[:update]
   end
 
   def update

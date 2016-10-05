@@ -2,20 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
-      key>&domain=airbnb.com
+    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      - Ruby
       Host:
-      - api.fullcontact.com
+      - gateway-a.watsonplatform.net
   response:
     status:
       code: 200
@@ -24,92 +23,49 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 30 Sep 2016 16:51:12 GMT
+      - Wed, 05 Oct 2016 17:56:47 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json
       Content-Length:
-      - '2032'
+      - '84'
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
-      Vary:
-      - Accept-Encoding
-      X-Rate-Limit-Limit:
-      - '60'
-      X-Rate-Limit-Remaining:
-      - '46'
-      X-Rate-Limit-Reset:
-      - '52'
-      Strict-Transport-Security:
-      - max-age=86400
+      Cache-Control:
+      - no-cache
+      X-Alchemyapi-Currentversion:
+      - 12.67a
+      X-Alchemyapi-Error-Msg:
+      - daily-transaction-limit-exceeded
+      X-Alchemyapi-Key:
+      - ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf
+      X-Alchemyapi-Params:
+      - sentiment=0&knowledgeGraph=0&detectedLanguage=unknown&submitLanguage=detect
+      X-Alchemyapi-Status:
+      - ERROR
+      X-Alchemyapi-Total-Transactions:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-        y9UmYRQAAA==
+      encoding: UTF-8
+      string: "{\r\n    \"status\": \"ERROR\",\r\n    \"statusInfo\": \"daily-transaction-limit-exceeded\"\r\n}\r\n"
     http_version: 
-  recorded_at: Fri, 30 Sep 2016 16:51:12 GMT
+  recorded_at: Wed, 05 Oct 2016 17:56:47 GMT
 - request:
     method: get
-    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
-      key>&domain=newrelic.com
+    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=New%20Relic,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      - Ruby
       Host:
-      - api.fullcontact.com
+      - gateway-a.watsonplatform.net
   response:
     status:
       code: 200
@@ -118,79 +74,113 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 30 Sep 2016 16:51:13 GMT
+      - Wed, 05 Oct 2016 17:56:48 GMT
       Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2288'
+      - application/json
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
-      Vary:
-      - Accept-Encoding
-      X-Rate-Limit-Limit:
-      - '60'
-      X-Rate-Limit-Remaining:
-      - '45'
-      X-Rate-Limit-Reset:
-      - '52'
-      Strict-Transport-Security:
-      - max-age=86400
+      Cache-Control:
+      - no-cache
+      X-Alchemyapi-Currentversion:
+      - 12.67a
+      X-Alchemyapi-Key:
+      - ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf
+      X-Alchemyapi-Params:
+      - sentiment=0&knowledgeGraph=0&detectedLanguage=unknown
+      X-Alchemyapi-Status:
+      - OK
+      X-Alchemyapi-Total-Transactions:
+      - '376'
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-        YrCc/SJUNrJrMpT66x5brMk2ANvMyNs+ychfN4k+3Nx7M75qusru3WUOMxKP
-        f6xWE/7wBHaj4RjyV8fSEeC3Gg5KVlWL0yfLFhcc4n3IN+lDV9cD4Jif/+hF
-        V0XXPFZQFcpmg4bez+6UnkZhGkK2wJEu4SJG2ohpdEwno2teUlljTD0keWD4
-        dk0xDZQNBI7e5+sNS/dXQLLYk6hdV24wV4ZEDMw+Ix+xOwQDNdyizvweDmt7
-        qEJS1f4eST8kHpAq4O26gvRHGJpXn13LkPGY5SXauYdNTR+YDmKDD77I+zTs
-        qfKAF3Z1EVpbrzeEbm49hkxaMLelx3lyFaJYhc4G5X2OQ1agknUw2yLpAkTh
-        Td/ptrFgq69XqH4Vmp+vEIb8a7C86aHhs8Ua1l3jQz/iDaQHMc3Izwjc4Iuu
-        Q4B9kGsnCHzB8HIIsVmoAEW4/zjqcHbeYrZvT3+611S22IfGO79th2bdG/QY
-        iiqKQxAuQaGmPh7Ml/1r/Ix8vsUkywfcP759e3F+cXa5M3WCZEiGonhNKiTo
-        v4zzBF4Z/pA6i9KMyUxSvJ4nDK8oMkkf1NnYmoM623PxDhNhnLF+3JccsVW/
-        63cPFugUy6JHXeqJe16rxahbF8fSY9y22w/9e8xa+JgENi+fapuX/ZqL8qmB
-        daOnt7pWtmuXJ2jg5OmeOSz5kw//5MP/Kx+OzJZ/XInMni+R2QMyEYzHj5Y3
-        YtB2epyD/+W7z3uyY5fXWwfyRX+219CLcpzu9uWvdn+YaWvlHDLQ7s8Wra/O
-        h+/sn1R5t54p9z7pYo7c9WNmJNnu28XuryLYNB58etnsYVzKsT15+fieKKPx
-        2J65Pv5CUj/tb7oZjI/0FF6r4nH7z8Y5fH949e2/d/IW6HgbAAA=
+      string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
+        or using information generated by AlchemyAPI, you are agreeing to be bound
+        by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
+        \   \"totalTransactions\": \"376\",\n    \"result\": {\n        \"docs\":
+        [\n            {\n                \"id\": \"MTA3Mzk0MTY4NDZ8MTQ3NTY1MzkwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Authors\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.509703994\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\" | news.sys-con.com\",\n
+        \                           \"url\": \"http://news.sys-con.com/node/3925389\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475653900\n            },\n            {\n                \"id\": \"OTk3NTQxMzg3N3wxNDc1NTkyNDEw\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.670449972\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\"\",\n                            \"url\":
+        \"http://it.tmcnet.com/news/2016/10/04/8430462.htm\"\n                        }\n
+        \                   }\n                },\n                \"timestamp\":
+        1475592410\n            },\n            {\n                \"id\": \"OTgxMzU2NjM5NXwxNDc1NTc5MTc5\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"PRNewswire\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.670691013\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their &quot;Black Friday&quot;\",\n                            \"url\":
+        \"http://www.benzinga.com/pressreleases/16/10/n8524207/new-relic-helps-leading-retailers-prepare-for-and-thrive-during-their-b\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475579179\n            },\n            {\n                \"id\": \"OTgyMTQyMzI5MnwxNDc1NTc5MDM0\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.695833981\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\"\",\n                            \"url\":
+        \"http://www.tmcnet.com/usubmit/2016/10/04/8430462.htm\"\n                        }\n
+        \                   }\n                },\n                \"timestamp\":
+        1475579034\n            },\n            {\n                \"id\": \"OTgyODkxNDM1N3wxNDc1NTc4Nzg3\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"New Relic\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.696009994\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\"\",\n                            \"url\":
+        \"http://www.prnewswire.com/news-releases/new-relic-helps-leading-retailers-prepare-for-and-thrive-during-their-black-friday-300338590.html\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475578787\n            },\n            {\n                \"id\": \"OTgxNTE3Njg1MHwxNDc1NTc4NzEw\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.695833981\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\"\",\n                            \"url\":
+        \"http://www.tmcnet.com/usubmit/-new-relic-helps-leading-retailers-prepare-and-thrive-/2016/10/04/8430462.htm\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475578710\n            },\n            {\n                \"id\": \"MTA0OTEyODIxNjN8MTQ3NTUzOTIwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.68660301\n                            },\n
+        \                           \"title\": \"New Relic Helps Leading Retailers
+        Prepare for and Thrive During Their \\\"Black Friday\\\"\",\n                            \"url\":
+        \"http://www.cbs8.com/story/33310426/new-relic-helps-leading-retailers-prepare-for-and-thrive-during-their-black-friday\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475539200\n            },\n            {\n                \"id\": \"OTQ0NDE4MzQ0NHwxNDc1NTM3NTMy\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.116117999\n                            },\n
+        \                           \"title\": \"Form 4 NEW RELIC, INC. For: Oct 03
+        Filed by: Koplow Hilarie A.\",\n                            \"url\": \"http://www.streetinsider.com/SEC+Filings/Form+4+NEW+RELIC%2C+INC.+For%3A+Oct+03+Filed+by%3A+Koplow+Hilarie+A./12096779.html\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475537532\n            },\n            {\n                \"id\": \"OTQ0NDEzOTI3MnwxNDc1NTM3NTMy\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.139385998\n                            },\n
+        \                           \"title\": \"Form 4 NEW RELIC, INC. For: Oct 03
+        Filed by: Cirne Lewis\",\n                            \"url\": \"http://www.streetinsider.com/SEC+Filings/Form+4+NEW+RELIC%2C+INC.+For%3A+Oct+03+Filed+by%3A+Cirne+Lewis/12096777.html\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475537532\n            },\n            {\n                \"id\": \"ODkxMzM5ODA2N3wxNDc1NDk2NDgz\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.312386006\n                            },\n
+        \                           \"title\": \"What is the difference between the
+        Availability monitoring under Settings in New Relic APM and the monitors in
+        New Relic Synthetics? Are they redundant? Thanks! \\u2022 /r/rails\",\n                            \"url\":
+        \"https://www.reddit.com/r/rails/comments/55lc6n/what_is_the_difference_between_the_availability/d8bsr3e\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475496483\n            }\n        ],\n        \"status\": \"OK\"\n    }\n}\r\n"
     http_version: 
-  recorded_at: Fri, 30 Sep 2016 16:51:13 GMT
+  recorded_at: Wed, 05 Oct 2016 17:56:48 GMT
 recorded_with: VCR 3.0.3

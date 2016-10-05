@@ -27,12 +27,23 @@ textarea, input {
   padding: 10px;
 }
 
+.right {
+  text-align: right;
+}
+
 input#user_password {
   width: 171px;
+}
+select#company_category {
+  max-width: 171px;
 }
 .job-scan {
   display: none;
   margin-bottom: 2em;
+}
+
+#event_contact_select, #event_job_select {
+  display: none;
 }
 
 .navbar {
@@ -109,12 +120,23 @@ body {
       width: 150px;
       height: 150px;
     }
-    .job-list {
+    .job-list, .event-list {
       background-color: white;
       border-bottom: $large-border;
       border-left: $small-border;
       border-right: $small-border;
     }
+    .event-list {
+      background-color: rgba(121, 108, 37, 0.75);
+      border-bottom: $large-border;
+      border-left: $small-border;
+      border-right: $small-border;
+    }
+
+    .event-titles {
+      color: white !important;
+    }
+
     .job-list#heading {
       font-family: $heading-font;
       border-bottom: 2px solid black;

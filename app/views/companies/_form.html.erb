@@ -7,18 +7,20 @@
         <%= f.label :name %>
         <%= f.text_field :name, :class => "form-control" %>
       </div>
-      <div class="form-group">
-        <%= f.label :address %>
-        <%= f.text_field :address, :class => "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :city %>
-        <%= f.text_field :city, :class => "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label "State" %>
-        <%= f.text_field :region, :class => "form-control" %>
-      </div>
+      <% if @update %>
+        <div class="form-group">
+          <%= f.label :address %>
+          <%= f.text_field :address, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :city %>
+          <%= f.text_field :city, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label "State" %>
+          <%= f.text_field :region, :class => "form-control" %>
+        </div>
+      <% end %>
       <div class="form-group">
         <%= f.label :category %>
         <%=f.select(:category, {:class => "category-select", id: "select-margin"}) do%>

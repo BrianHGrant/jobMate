@@ -2,20 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
-      key>&domain=airbnb.com
+    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      - Ruby
       Host:
-      - api.fullcontact.com
+      - gateway-a.watsonplatform.net
   response:
     status:
       code: 200
@@ -24,74 +23,220 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 30 Sep 2016 16:51:05 GMT
+      - Wed, 05 Oct 2016 17:56:38 GMT
       Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '2030'
+      - application/json
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
-      Vary:
-      - Accept-Encoding
-      X-Rate-Limit-Limit:
-      - '60'
-      X-Rate-Limit-Remaining:
-      - '57'
-      X-Rate-Limit-Reset:
-      - '59'
-      Strict-Transport-Security:
-      - max-age=86400
+      Cache-Control:
+      - no-cache
+      X-Alchemyapi-Currentversion:
+      - 12.67a
+      X-Alchemyapi-Key:
+      - ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf
+      X-Alchemyapi-Params:
+      - sentiment=0&knowledgeGraph=0&detectedLanguage=unknown
+      X-Alchemyapi-Status:
+      - OK
+      X-Alchemyapi-Total-Transactions:
+      - '436'
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-        QmEUAAA=
+      string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
+        or using information generated by AlchemyAPI, you are agreeing to be bound
+        by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
+        \   \"totalTransactions\": \"436\",\n    \"result\": {\n        \"docs\":
+        [\n            {\n                \"id\": \"MTExMzgwMzMwNjR8MTQ3NTY4MjQyMQ\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"e-NewsWire\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.439642996\n                            },\n
+        \                           \"title\": \"Qantas in landmark deal with Airbnb
+        : TTR Weekly\",\n                            \"url\": \"http://www.ttrweekly.com/site/2016/10/qantas-in-landmark-deal-with-airbnb/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475682421\n            },\n            {\n                \"id\": \"MTEwODQ1OTIxNTd8MTQ3NTY3OTE5MQ\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Gideon Spanier\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.635923982\n                            },\n
+        \                           \"title\": \"Audi and Airbnb create a modern-day
+        western for families and millennials\",\n                            \"url\":
+        \"http://www.campaignlive.co.uk/article/audi-airbnb-create-modern-day-western-families-millennials/1409848?src_site=marketingmagazine\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475679191\n            },\n            {\n                \"id\": \"MTA5ODE5MjU4OTB8MTQ3NTY3MTg2Mg\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Ben Paddon\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.379732013\n                            },\n
+        \                           \"title\": \"This Airbnb Room Is The Plumber\\u2019s
+        Overalls\",\n                            \"url\": \"http://nerdapproved.com/household/mario-airbnb/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475671862\n            },\n            {\n                \"id\": \"MTA5MjA0NzYzMDd8MTQ3NTY2ODY4MA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.496739\n                            },\n
+        \                           \"title\": \"World\\u2019s 8 coolest caves you
+        can rent via Airbnb \\u2013 3 in Santorini\",\n                            \"url\":
+        \"http://en.protothema.gr/worlds-8-coolest-caves-you-can-rent-via-airbnb-3-in-santorini/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475668680\n            },\n            {\n                \"id\": \"MTA3ODA2MTQzMjZ8MTQ3NTY1ODM1OQ\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": -0.683677018\n                            },\n
+        \                           \"title\": \"Airbnb host sued for $13,000.00,
+        accused of vio... | Homeaway\",\n                            \"url\": \"https://community.homeaway.com/thread/54768\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475658359\n            },\n            {\n                \"id\": \"MTA3NzE0NDI3MzF8MTQ3NTY1NzIxOA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.570991993\n                            },\n
+        \                           \"title\": \"Qantas partners with Airbnb to boost
+        loyalty scheme\",\n                            \"url\": \"http://www.breakingtravelnews.com/news/article/qantas-partners-with-airbnb-to-boost-loyalty-scheme/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475657218\n            },\n            {\n                \"id\": \"MTA1OTA4NDY1MDd8MTQ3NTYzNzkwNg\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.0202369001\n                            },\n
+        \                           \"title\": \"Airbnb Refund & No Refund\",\n                            \"url\":
+        \"http://elliott.org/forum/threads/airbnb-refund-no-refund.4161/\"\n                        }\n
+        \                   }\n                },\n                \"timestamp\":
+        1475637906\n            },\n            {\n                \"id\": \"MTA1OTA4MjYzNDV8MTQ3NTYzNzkwNg\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Jesse Tabit\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.397992015\n                            },\n
+        \                           \"title\": \"Airbnb Partners With Airline, New
+        Points System Available \\u2013 FlyerTalk - The world's most popular frequent
+        flyer community\",\n                            \"url\": \"http://www.flyertalk.com/articles/airbnb-partners-with-airline-new-points-system-available.html\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475637906\n            },\n            {\n                \"id\": \"MTA1NTEwMjY4ODl8MTQ3NTYzNDU3Mg\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Jeff Kidd \\njkidd@thestate.com\",\n
+        \                           \"docSentiment\": {\n                                \"score\":
+        0.7327259779999999\n                            },\n                            \"title\":
+        \"Need shelter from Hurricane Matthew? Airbnb has tool that could help you
+        for free | The State\",\n                            \"url\": \"http://www.thestate.com/news/local/article106023807.html\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475634572\n            },\n            {\n                \"id\": \"MTA1MjE1NTM2Mjd8MTQ3NTYzMTk0NA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": -0.282447994\n                            },\n
+        \                           \"title\": \"Airbnb prompts complaints among local
+        residents | Japan Update\",\n                            \"url\": \"http://www.japanupdate.com/2016/10/airbnb-prompts-complaints-among-local-residents/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475631944\n            },\n            {\n                \"id\": \"MTA0Njg3MTQ0NTF8MTQ3NTYyODcyNA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Collins Mwai\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.363012999\n                            },\n
+        \                           \"title\": \"RDB to develop, standardise Airbnb
+        home rental service\",\n                            \"url\": \"http://www.newtimes.co.rw/section/article/2016-10-05/204186/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475628724\n            },\n            {\n                \"id\": \"MTA0ODMyMDk2NTF8MTQ3NTYyODY4OA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Kate Webster\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.255686998\n                            },\n
+        \                           \"title\": \"Are Qantas and Airbnb a match made
+        in hell for industry? \\u2013 Travel Weekly\",\n                            \"url\":
+        \"http://www.travelweekly.com.au/article/are-qantas-and-airbnb-a-match-made-in-hell-for-industry/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475628688\n            },\n            {\n                \"id\": \"MTA0MzkzNjEwMTF8MTQ3NTYyNTk1NA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.456285\n                            },\n
+        \                           \"title\": \"Dozr Raises $1.9 Million to Become
+        an Airbnb for Earthmoving Equipment\",\n                            \"url\":
+        \"http://www.forconstructionpros.com/news/12265300/dozr-raises-19-million-to-become-an-airbnb-for-earthmoving-equipment\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625954\n            },\n            {\n                \"id\": \"MTExNzkxMDg5MzV8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Lauretta Charlton\",\n                            \"docSentiment\":
+        {\n                                \"score\": -0.0574692003\n                            },\n
+        \                           \"title\": \"Is Airbnb Good for the Black Middle
+        Class? - The New Yorker\",\n                            \"url\": \"http://www.newyorker.com/tech/elements/is-airbnb-good-for-the-black-middle-class\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTEwNzA1MjczODh8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"ElizabethSLaFleur\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.270155013\n                            },\n
+        \                           \"title\": \"AirBNB activates emergency accommodations\",\n
+        \                           \"url\": \"http://www.independentmail.com/story/news/2016/10/05/airbnb-activates-emergency-accommodations/91602556/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTA2NjEyOTQ0MDh8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"James Wilkinson\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.508524001\n                            },\n
+        \                           \"title\": \"Qantas praised and criticised for
+        $11 million Airbnb global partnership - Hotel Management\",\n                            \"url\":
+        \"http://www.hotelmanagement.com.au/2016/10/05/qantas-airbnb-sign-major-frequent-flyer-partnership-deal/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTEyMjc3NTQ1ODl8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Elizabeth LaFleur\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.270155013\n                            },\n
+        \                           \"title\": \"AirBNB activates emergency accommodations\",\n
+        \                           \"url\": \"http://www.greenvilleonline.com/story/news/2016/10/05/airbnb-activates-emergency-accommodations/91602556/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTA4MDg4NTc5NTh8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Jeff Parsons\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.576402009\n                            },\n
+        \                           \"title\": \"The Super Mario Airbnb is a dream
+        property for any Nintendo fan\",\n                            \"url\": \"http://www.mirror.co.uk/tech/super-mario-takes-over-airbnb-8981471\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTExNzA5OTcxMjd8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Name\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.0294339992\n                            },\n
+        \                           \"title\": \"Airbnb police spring up on internet
+        as \\u2018sharing\\u2019 grows\",\n                            \"url\": \"http://www.eglobaltravelmedia.com.au/airbnb-police-spring-up-on-internet-as-sharing-grows/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTExNjkwMzIwMjF8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Name *\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.210538\n                            },\n
+        \                           \"title\": \"Earn 3 United Miles per Dollar on
+        Airbnb with MileagePlus X - Point Me to the Plane\",\n                            \"url\":
+        \"http://pointmetotheplane.boardingarea.com/2016/10/05/united-miles-airbnb/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTEwMTk5MzQwMTR8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Curtis Silver\",\n                            \"docSentiment\":
+        {\n                                \"score\": -0.172518\n                            },\n
+        \                           \"title\": \"Airbnb, Snapgoods and 12 More Pioneers
+        Of The \\u2018Share Economy\\u2019 - pg.1\",\n                            \"url\":
+        \"http://www.forbes.com/pictures/gllf45fdgk/airbnb-snapgoods-and-12/?utm_source=dlvr.it&utm_medium=twitter\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTEwMDc3OTgxMDV8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Oscar Williams-Grut\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.369534999\n                            },\n
+        \                           \"title\": \"A fintech company used by Google,
+        Amazon, and Airbnb raised $180 million - Business Insider\",\n                            \"url\":
+        \"http://www.businessinsider.sg/fintech-payoneer-series-e-technology-crossover-ventures-2016-10/\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTA4OTc0MTc0ODh8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"\",\n                            \"docSentiment\":
+        {\n                                \"score\": -0.379965007\n                            },\n
+        \                           \"title\": \"Airbnb: Dream Or Nightmare?\",\n
+        \                           \"url\": \"http://iview.abc.net.au/programs/airbnb-dream-or-nightmare/ZW0845A001S00\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTExNjk2NjkwNjZ8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"Ashlee Kieler\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.534195006\n                            },\n
+        \                           \"title\": \"Some Airlines Now Rewarding Passengers
+        For Using Airbnb\",\n                            \"url\": \"https://consumerist.com/2016/10/05/some-airlines-now-rewarding-passengers-for-using-airbnb/?utm_source=twitter&utm_medium=socialflow\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            },\n            {\n                \"id\": \"MTExNjY5MzA4MDN8MTQ3NTYyNTYwMA\",\n
+        \               \"source\": {\n                    \"enriched\": {\n                        \"url\":
+        {\n                            \"author\": \"TEGNA\",\n                            \"docSentiment\":
+        {\n                                \"score\": 0.406848997\n                            },\n
+        \                           \"title\": \"Airbnb Activates Tool For Evacuatees\",\n
+        \                           \"url\": \"http://www.wltx.com/news/local/airbnb-activates-tool-for-evacuatees/329087707\"\n
+        \                       }\n                    }\n                },\n                \"timestamp\":
+        1475625600\n            }\n        ],\n        \"next\": \"MTEzNDUzNDk1ODEzMTczNTE0fHw1NTY0MjU3NDYzOTg4Njg0NDR8TVRBMk5qRXlPVFEwTURoOE1UUTNOVFl5TlRZd01BfDQxNzE2NTU4NjY0NDI1ODE3NzZ8TVRBNE1EZzROVGM1TlRoOE1UUTNOVFl5TlRZd01BfDUwNzQzMzEyODQzNTkwNjE2MTZ8TVRBNE9UYzBNVGMwT0RoOE1UUTNOVFl5TlRZd01BfDEzMzAyMTA1MjM3ODEwMTMyMDEyfE1URXhOalk1TXpBNE1ETjhNVFEzTlRZeU5UWXdNQQ\",\n
+        \       \"status\": \"OK\"\n    }\n}\r\n"
     http_version: 
-  recorded_at: Fri, 30 Sep 2016 16:51:05 GMT
+  recorded_at: Wed, 05 Oct 2016 17:56:38 GMT
 recorded_with: VCR 3.0.3

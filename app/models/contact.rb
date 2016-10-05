@@ -3,4 +3,5 @@ class Contact < ActiveRecord::Base
   belongs_to :company, optional: true
   belongs_to :user
   has_many :jobs
+  has_many :events, :as => :eventable
 end

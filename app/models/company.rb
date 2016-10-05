@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  validates_presence_of :name, :address, :category
+  validates_presence_of :name
   has_many :contacts
   has_many :jobs
   belongs_to :user

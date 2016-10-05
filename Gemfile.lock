@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ffaker/ffaker.git
-  revision: fe00f487d67a104de1c2cb201bf40c741ba5fff6
+  revision: 77ddf074ef7f46dea56a7a53957f016d41d63f2b
   specs:
     ffaker (2.2.0)
 
@@ -46,15 +46,15 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (7.1.2)
-    autoprefixer-rails (6.5.0)
+    autoprefixer-rails (6.5.0.2)
       execjs
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
-    byebug (9.0.5)
-    capybara (2.9.1)
+    byebug (9.0.6)
+    capybara (2.9.2)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -104,7 +104,7 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashdiff (0.3.0)
-    http-cookie (1.0.2)
+    http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
     jbuilder (2.6.0)
@@ -137,9 +137,8 @@ GEM
     multi_json (1.12.1)
     netrc (0.11.0)
     nio4r (1.2.1)
-    nokogiri (1.6.8)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
@@ -148,7 +147,6 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.19.0)
-    pkg-config (1.1.7)
     poltergeist (1.10.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -198,7 +196,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rspec-core (3.5.3)
+    rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -236,10 +234,11 @@ GEM
     skylight (0.10.6)
       activesupport (>= 3.0.0)
     slop (3.6.0)
-    spring (1.7.2)
-    spring-watcher-listen (2.0.0)
+    spring (2.0.0)
+      activesupport (>= 4.2)
+    spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
-      spring (~> 1.2)
+      spring (>= 1.2, < 3.0)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -323,4 +322,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.1
+   1.13.2

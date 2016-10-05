@@ -12,3 +12,16 @@
     <% end %>
   </div>
 <hr>
+  <h3 class="center">Contacts</h3>
+  <ul>
+    <% @company.contacts.each do |contact| %>
+      <li><%= link_to contact.last_name+', '+contact.first_name, contact_path(contact) %></li>
+    <% end %>
+  </ul>
+<hr>
+  <h3 class="center">Jobs</h3>
+  <ul>
+    <% @jobs.each do |job| %>
+      <li><%= link_to job.title.titleize, company_job_path(@company, job) %></li>
+    <% end %>
+  </ul>

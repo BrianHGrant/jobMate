@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the add a company process', js:true, :vcr => true do
+describe 'the add a company process', js:true do
   it "adds a new company" do
     VCR.use_cassette('save_company', :record => :new_episodes) do
       FactoryGirl.create(:quote)
@@ -11,6 +11,7 @@ describe 'the add a company process', js:true, :vcr => true do
       fill_in 'Name', with: "Airbnb"
       fill_in 'Address', with: "89 W. 24th St"
       fill_in 'City', with: "Portland"
+      find('#company_domain').set("http://www.airbnb.com")
       select 'Internet Publishing and Broadcasting'
       click_on "Save Company"
       expect(page).to have_content "Airbnb"
@@ -25,6 +26,7 @@ describe 'the add a company process', js:true, :vcr => true do
     click_link "New Company"
     fill_in 'Name', :with => ""
     fill_in 'Address', :with => "89 W. 24th St, New York, NY"
+    find('#company_domain').set("http://www.airbnb.com")
     select 'Internet Publishing and Broadcasting'
     click_on "Save Company"
     expect(page).to have_content 'errors'

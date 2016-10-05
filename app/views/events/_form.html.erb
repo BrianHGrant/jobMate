@@ -1,0 +1,51 @@
+
+<div class="row">
+  <div class="col-sm-8 well">
+    <%= form_for [@event] do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_field :description, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :date %>
+        <%= f.date_field :date, :class => "form-control"%>
+      </div>
+      <div class="form-group">
+        <%= f.label :time %>
+        <%= f.time_field :time, :class => "form-control"%>
+      </div>
+      <div class="form-group">
+        <%= f.label :duration %>
+        <%= f.number_field :duration, :class => "form-control"%>
+      </div>
+      <h3 class="event-contact btn btn-warning">Add Contact</h3>
+      <h3 class="event-job btn btn-warning">Add Job</h3>
+      <div id="event_contact_select">
+        <% if current_user.contacts.any? %>
+          <%= f.label 'Contact' %>
+          <%=f.select(:eventable_id, {:class => "contact-select"}) do%>
+          <%=content_tag(:option, "No Contact", value: "new-contact")%>
+            <% current_user.contacts.each do |contact|%>
+              <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
+            <%end%>
+          <%end%>
+        <%end%>
+      </div>
+      <div id="event_job_select">
+        <% if current_user.jobs.any? %>
+          <%= f.label 'Job' %><%=f.select(:eventable_id, {:class => "contact-select"}) do%>
+          <%=content_tag(:option, "No Jobs", value: "new-job")%>
+            <% current_user.jobs.each do |job|%>
+              <%=content_tag(:option, job.title.titleize, value: job.id)%>
+            <%end%>
+          <%end%>
+        <%end%>
+      </div>
+      <%= f.submit "Create Event", :class => "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

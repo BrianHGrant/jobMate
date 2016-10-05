@@ -3,6 +3,7 @@ class Job < ActiveRecord::Base
   belongs_to :company
   belongs_to :contact, optional: true
   belongs_to :user
+  has_many :events, :as => :eventable
   has_attached_file :resume
   validates_attachment :resume, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
   has_attached_file :cover_letter

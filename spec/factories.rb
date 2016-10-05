@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :event do
+
+  end
   factory :user do
     email 'test@test.com'
     password '4r56tRx'
@@ -15,7 +18,6 @@ FactoryGirl.define do
     region 'OR'
     category 'manufacturing'
     domain 'airbnb.com'
-
     factory :company_with_contacts do
       transient do
         contacts_count 5

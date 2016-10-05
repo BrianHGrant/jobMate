@@ -4,6 +4,12 @@
       <%= image_tag('https://logo.clearbit.com/' + @company.domain, :class => "pull-right img-responsive img-circle") %>
     <% end %>
     <h1><%= @company.name %></h1>
+    <p>
+      <%= link_to "Add a job", new_company_job_path(@company), :class => "btn btn-primary" %>
+      <%= link_to "Add a contact", new_contact_path(@company), :class => "btn btn-success" %>
+      <%= link_to "Edit", edit_company_path(@company, update: true), :class => "btn btn-warning" %>
+      <%= link_to 'Delete', company_path(@company), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %>
+    </p>
   </div>
 </div>
 <div class="row">
@@ -42,21 +48,3 @@
     </div>
   </div>
 </div>
-<ul>
-  <% @jobs.each do |job| %>
-    <li><%= job.title.titleize %></li>
-  <% end %>
-</ul>
-
-<ul>
-  <% @company.contacts.each do |contact| %>
-    <li><%= contact.last_name %>, <%= contact.first_name %></li>
-  <% end %>
-</ul>
-
-<p>
-  <%= link_to "Add a job", new_company_job_path(@company), :class => "btn btn-primary" %>
-  <%= link_to "Add a contact", new_contact_path(@company), :class => "btn btn-success" %>
-  <%= link_to "Edit", edit_company_path(@company), :class => "btn btn-warning" %>
-  <%= link_to 'Delete', company_path(@company), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %>
-</p>

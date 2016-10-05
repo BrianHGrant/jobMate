@@ -2,20 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
-      key>&domain=airbnb.com
+    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      - Ruby
       Host:
-      - api.fullcontact.com
+      - gateway-a.watsonplatform.net
   response:
     status:
       code: 200
@@ -24,74 +23,32 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 30 Sep 2016 16:51:08 GMT
+      - Wed, 05 Oct 2016 17:56:41 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json
       Content-Length:
-      - '2032'
+      - '84'
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
-      Vary:
-      - Accept-Encoding
-      X-Rate-Limit-Limit:
-      - '60'
-      X-Rate-Limit-Remaining:
-      - '53'
-      X-Rate-Limit-Reset:
-      - '57'
-      Strict-Transport-Security:
-      - max-age=86400
+      Cache-Control:
+      - no-cache
+      X-Alchemyapi-Currentversion:
+      - 12.67a
+      X-Alchemyapi-Error-Msg:
+      - daily-transaction-limit-exceeded
+      X-Alchemyapi-Key:
+      - ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf
+      X-Alchemyapi-Params:
+      - sentiment=0&knowledgeGraph=0&detectedLanguage=unknown&submitLanguage=detect
+      X-Alchemyapi-Status:
+      - ERROR
+      X-Alchemyapi-Total-Transactions:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-        4XQHYRQAAA==
+      encoding: UTF-8
+      string: "{\r\n    \"status\": \"ERROR\",\r\n    \"statusInfo\": \"daily-transaction-limit-exceeded\"\r\n}\r\n"
     http_version: 
-  recorded_at: Fri, 30 Sep 2016 16:51:08 GMT
+  recorded_at: Wed, 05 Oct 2016 17:56:41 GMT
 recorded_with: VCR 3.0.3

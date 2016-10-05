@@ -4,7 +4,8 @@ class User < ApplicationRecord
   has_many :companies
   has_many :contacts
   has_many :jobs
-  
+  has_many :events
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

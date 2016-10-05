@@ -24,18 +24,51 @@
   </div>
 <% else %>
   <div class="row landing-main">
-    <div class="col-sm-4 main-page-col">
-      <br>
-      <h3><%= link_to "Add a New Company", new_company_path %></h3>
+    <div class="col-sm-6 main-page-col well">
+      <h3 class="center">Upcoming Events</h3>
+      <hr>
+      <div class="row company-list" id="heading">
+        <div class="col-sm-3 job-list-title">
+          <h3>Date</h3>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h3>Time</h3>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h3>Length</h3>
+        </div>
+        <div class="col-sm-3 job-list-title">
+          <h3>Type</h3>
+        </div>
+      </div>
+      <% if current_user.events.any? %>
+        <% current_user.events.each do |event| %>
+        <div class="row event-list">
+          <div class="col-sm-3 job-list-title">
+            <h4><span class="small-screen-heading">Title: </span><%= link_to event.name, event_path(event), class: "event-titles"%></h4>
+          </div>
+          <div class="col-sm-3 job-list-title">
+            <h4><span class="small-screen-heading">Date: </span><%= event.date %></h4>
+          </div>
+          <div class="col-sm-3 job-list-title">
+            <h4><span class="small-screen-heading">Time: </span><%= event.time %></h4>
+          </div>
+          <div class="col-sm-3 job-list-title">
+            <h4><span class="small-screen-heading">Time: </span><%= event.duration %></h4>
+          </div>
+        </div>
+        <% end %>
+      <%end%>
+      <p class="center"><%= link_to 'New Event', new_event_path, class: "btn btn-warning" %></p>
     </div>
-    <div class="col-sm-4 main-page-col">
+    <div class="col-sm-2 main-page-col">
+    </div>
+    <div class="col-sm-4 main-page-col well">
       <h3>What do you want to do?</h3>
-      <br>
-      <h3><%= link_to "See your contacts", contacts_path %></h3>
-    </div>
-    <div class="col-sm-4 main-page-col">
-      <br>
-      <h3><%= link_to "See your jobs", jobs_path %></h3>
+      <hr>
+      <h3 class="right"><%= link_to "Add a new company", new_company_path %></h3>
+      <h3 class="right"><%= link_to "See your contacts", contacts_path %></h3>
+      <h3 class="right"><%= link_to "See your jobs", jobs_path %></h3>
     </div>
   </div>
 <% end %>

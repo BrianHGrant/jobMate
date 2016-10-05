@@ -27,4 +27,13 @@ $(document).on('turbolinks:load', function() {
     $("#hide-compare").hide();
     $("#compare").show();
   })
+
+  $(".event-contact").click(function() {
+    $("#event_contact_select").show();
+    $("#event_job_select").hide();
+  })
+  $(".event-job").click(function() {
+    $("#event_job_select").show();
+    $("#event_contact_select").hide();
+  })
 });

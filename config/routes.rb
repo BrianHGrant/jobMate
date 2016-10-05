@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :analyses
     end
   end
+  resources :events
   resources :contacts
   resources :jobs, :only => :index
   resources :users, :only => :show

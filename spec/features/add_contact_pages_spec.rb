@@ -4,8 +4,15 @@ describe 'the add a contact process', js:true, :vcr => true do
   it "adds a new contact" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    company = FactoryGirl.create(:company, user: user)
-    visit company_path(company)
+    visit companies_path
+    click_link "New Company"
+    fill_in 'Name', with: "Airbnb"
+    fill_in 'Address', with: "89 W. 24th St"
+    fill_in 'City', with: "Portland"
+    find('#company_domain').set("http://www.airbnb.com")
+    select 'Internet Publishing and Broadcasting'
+    click_on "Save Company"
+    click_on "Add a job"
     click_on "Add a contact"
     fill_in "Last name", :with => "Jean"
     fill_in "First name", :with => "Barbara"
