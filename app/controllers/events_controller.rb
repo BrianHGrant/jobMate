@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
   helper ApplicationHelper
   def index
-    @events = current_user.events.order(deadline: :desc).page(params[:page]).per(10)
+    @events = current_user.events.order(date: :asc, time: :asc).page(params[:page]).per(10)
   end
 
   def show
