@@ -7,12 +7,9 @@ describe 'the add a contact process', js:true, :vcr => true do
     visit companies_path
     click_link "New Company"
     fill_in 'Name', with: "Airbnb"
-    fill_in 'Address', with: "89 W. 24th St"
-    fill_in 'City', with: "Portland"
     find('#company_domain').set("http://www.airbnb.com")
     select 'Internet Publishing and Broadcasting'
     click_on "Save Company"
-    click_on "Add a job"
     click_on "Add a contact"
     fill_in "Last name", :with => "Jean"
     fill_in "First name", :with => "Barbara"
@@ -28,14 +25,17 @@ describe 'the add a contact process', js:true, :vcr => true do
   it "gives error if contact form is incomplete" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    company = FactoryGirl.create(:company, user: user)
-    visit company_path(company)
+    visit companies_path
+    click_link "New Company"
+    fill_in 'Name', with: "Airbnb"
+    find('#company_domain').set("http://www.airbnb.com")
+    select 'Internet Publishing and Broadcasting'
+    click_on "Save Company"
     click_on "Add a contact"
-    fill_in "Last name", :with => "Jean"
     fill_in "First name", :with => "Barbara"
     fill_in "Phone", :with => "5035555555"
     fill_in "Email", :with => "example@email.com"
-    fill_in "Relationship", :with => ""
+    fill_in "Relationship", :with => "Professional"
     fill_in "Position", :with => "Manager"
     fill_in "Linkedin", :with => "http://wwww.linkedin/in/barbjean05"
     click_on "Save contact"

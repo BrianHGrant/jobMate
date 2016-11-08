@@ -4,6 +4,8 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+//= require highcharts
+//= require chartkick
 
 $(document).on('turbolinks:load', function() {
   $("#paginator a").on("click", function() {

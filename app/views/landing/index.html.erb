@@ -51,7 +51,7 @@
             <h4><span class="small-screen-heading">Date: </span><%= event.date %></h4>
           </div>
           <div class="col-sm-3 job-list-title">
-            <h4><span class="small-screen-heading">Time: </span><%= event.time %></h4>
+            <h4><span class="small-screen-heading">Time: </span><%= formattedTime(event.time) %></h4>
           </div>
           <div class="col-sm-3 job-list-title">
             <h4><span class="small-screen-heading">Length: </span><%= event.duration %></h4>
@@ -59,7 +59,7 @@
         </div>
         <% end %>
       <%end%>
-      <p class="center"><%= link_to 'New Event', new_event_path, class: "btn btn-warning" %></p>
+      <p class="center btn-new-event"><%= link_to 'New Event', new_event_path, class: "btn btn-warning" %></p>
     </div>
     <div class="col-sm-2 main-page-col">
     </div>

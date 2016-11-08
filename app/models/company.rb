@@ -6,6 +6,7 @@ class Company < ActiveRecord::Base
   before_create :get_company_info, :get_news
   serialize :news_response
   serialize :response
+
   private
   def get_company_info
     uri = URI.parse(domain) rescue nil
@@ -42,8 +43,16 @@ class Company < ActiveRecord::Base
   end
 
   def get_news
-      uri = URI.parse("https://gateway-a.watsonplatform.net/calls/data/GetNews?outputMode=json&start=now-7d&end=now&count=25&q.enriched.url.enrichedTitle.entities.entity=|text=#{self.name},type=company|&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&apikey=#{ENV['ALCHEMY_DATA_KEY']}")
-      news_response = Net::HTTP.get_response(uri)
-      self.news_response = JSON.parse(news_response.body)
+    begin
+      news_response = JSON.parse(RestClient::Request.new(
+      method: :get,
+      url: "https://access.alchemyapi.com/calls/data/GetNews?apikey=#{ENV['ALCHEMY_DATA_KEY']}&return=enriched.url.title,enriched.url.url,enriched.url.author,enriched.url.publicationDate,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.concepts&start=now-7d&end=now&q.enriched.url.enrichedTitle.entities.entity=|text=" + self.name + ",type=company|&q.enriched.url.enrichedTitle.docSentiment.type=positive&count=25&&dedup=true&rank=medium&outputMode=json"
+      ).execute)
+      self.news_response = news_response
+    rescue RestClient::BadRequest => error
+      message = JSON.parse(error.response)['message']
+      errors.add(:base, message)
+      throw(:abort)
+    end
   end
 end

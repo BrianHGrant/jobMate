@@ -7,8 +7,14 @@ module ApplicationHelper
   end
 
   def industries
-    industries_open = File.open('./public/txt/industries.txt')
-    industries = industries_open.readlines
-    industries.map! {|industry| industry.chomp }
+    @industries ||= begin
+      industries_open = File.open('./public/txt/industries.txt')
+      industries = industries_open.readlines
+      industries.map! {|industry| industry.chomp }
+    end
+  end
+
+  def formattedTime(time)
+    time.strftime("%H:%M")
   end
 end

@@ -1,19 +1,31 @@
-
-<h2>Cover Letter Analysis</h2>
-<h3>The Tone of your Language:</h3>
-<% @analysis.response['document_tone']['tone_categories'][1]['tones'].each do |tone| %>
-  <p>Tone: <%= tone['tone_name'] %></p>
-  <p>Score: <%= tone['score'] %></p>
-<% end %>
-
-<h3>The Social Tone of your Language:</h3>
-<% @analysis.response['document_tone']['tone_categories'][2]['tones'].each do |tone| %>
-  <p>Tone: <%= tone['tone_name'] %></p>
-  <p>Score: <%= tone['score'] %></p>
-<% end %>
+<div class="row">
+  <div class="col-sm-12 well">
+      <h2 class="center">Cover Letter Analysis</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 well">
+    <h3 class="center">The Tone of your Language:</h3>
+    <!-- <% @analysis.response['document_tone']['tone_categories'][1]['tones'].each do |tone| %>
+      <p>Tone: <%= tone['tone_name'] %></p>
+      <p>Score: <%= tone['score'] * 100 %></p>
+    <% end %> -->
+    <%= bar_chart ({"Analytical": @analysis.response['document_tone']['tone_categories'][1]['tones'][0]['score'] * 100, "Confident": @analysis.response['document_tone']['tone_categories'][1]['tones'][1]['score'] * 100, "Tentative": @analysis.response['document_tone']['tone_categories'][1]['tones'][2]['score'] * 100 }), colors: ["#CEE2AC", "#70A127"], max: 100 %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 well">
+    <h3 class="center">The Social Tone of your Language:</h3>
+    <!-- <% @analysis.response['document_tone']['tone_categories'][2]['tones'].each do |tone| %>
+      <p>Tone: <%= tone['tone_name'] %></p>
+      <p>Score: <%= tone['score'] %></p>
+    <% end %> -->
+    <%= bar_chart ({"Openess": @analysis.response['document_tone']['tone_categories'][2]['tones'][0]['score'] * 100, "Conscientiousness": @analysis.response['document_tone']['tone_categories'][2]['tones'][1]['score'] * 100, "Extraversion": @analysis.response['document_tone']['tone_categories'][2]['tones'][2]['score'] * 100, "Agreeableness": @analysis.response['document_tone']['tone_categories'][2]['tones'][3]['score'] * 100, "Emotional Range": @analysis.response['document_tone']['tone_categories'][2]['tones'][4]['score'] * 100 }), colors: ["#ADD8DD", '#8AD0D3'], max: 100 %>
+  </div>
+</div>
 <div class="row">
   <div class="col-sm-offset-6 col-sm-2">
     <h4>Powered By:</h4>
-      <%= link_to image_tag('ibm_watson.png', id: "watson"), "https://developer.ibm.com/watson/"  %>
+    <%= link_to image_tag('ibm_watson.png', id: "watson"), "https://developer.ibm.com/watson/"  %>
   </div>
 </div>

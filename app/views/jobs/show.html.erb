@@ -3,9 +3,10 @@
     <div class="col-sm-12 well">
       <p class="pull-right">  <%= link_to "Edit", edit_company_job_path(@company, @job), :class => "btn btn-warning" %>
       <%= link_to 'Delete', company_job_path(@company, @job), :data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
-      <h2 class="center-block"><span class="job-title"><%= @job.title %></span></h2>
+      <h2 class="center-block"><span class="job-title"><%= @job.title.titleize %></span></h2>
       <h3 class="pull-right">Address: <%= @job.company.address%></h3>
       <h3>Company: <%= @job.company.name %></h3>
+      <h3>Post: <%= link_to "View", "http://#{@job.post_link}", target: "_blank" %></h3>
     </div>
   </div>
   <div class="row">

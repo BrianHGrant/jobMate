@@ -2,19 +2,20 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
+    uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
+      key>&domain=www.airbnb.com
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
       User-Agent:
-      - Ruby
+      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
       Host:
-      - gateway-a.watsonplatform.net
+      - api.fullcontact.com
   response:
     status:
       code: 200
@@ -23,7 +24,99 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 05 Oct 2016 17:56:37 GMT
+      - Mon, 07 Nov 2016 05:49:53 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2011'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      X-Rate-Limit-Limit:
+      - '60'
+      X-Rate-Limit-Remaining:
+      - '57'
+      X-Rate-Limit-Reset:
+      - '56'
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Mon, 07 Nov 2016 05:49:53 GMT
+- request:
+    method: get
+    uri: https://access.alchemyapi.com/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&dedup=true&end=now&outputMode=json&q.enriched.url.enrichedTitle.docSentiment.type=positive&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&rank=medium&return=enriched.url.title,enriched.url.url,enriched.url.author,enriched.url.publicationDate,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.concepts&start=now-7d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
+      Host:
+      - access.alchemyapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 07 Nov 2016 05:49:53 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -33,7 +126,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Alchemyapi-Currentversion:
-      - 12.67a
+      - '12.71'
       X-Alchemyapi-Error-Msg:
       - daily-transaction-limit-exceeded
       X-Alchemyapi-Key:
@@ -50,5 +143,5 @@ http_interactions:
       encoding: UTF-8
       string: "{\r\n    \"status\": \"ERROR\",\r\n    \"statusInfo\": \"daily-transaction-limit-exceeded\"\r\n}\r\n"
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 17:56:37 GMT
+  recorded_at: Mon, 07 Nov 2016 05:49:53 GMT
 recorded_with: VCR 3.0.3

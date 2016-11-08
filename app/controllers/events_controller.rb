@@ -17,7 +17,7 @@ class EventsController < ApplicationController
     @event = current_user.events.new(event_params)
     @event.user = current_user
     if @event.save
-      flash[:notice] = "Event successfully added!"
+      flash[:notice] = 'Event successfully added!'
       redirect_to event_path(@event)
     else
       render :new
@@ -30,10 +30,10 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event= current_user.events.find(params[:id])
+    @event = current_user.events.find(params[:id])
     @event.user = current_user
     if @event.update(event_params)
-      flash[:notice] = "Edit Successful!"
+      flash[:notice] = 'Edit Successful!'
       redirect_to events_path
     else
       render :edit
@@ -47,8 +47,8 @@ class EventsController < ApplicationController
   end
 
   private
+
   def event_params
     params.require(:event).permit(:name, :time, :date, :duration, :description, :eventable_id)
   end
-
 end

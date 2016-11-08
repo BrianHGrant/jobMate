@@ -6,14 +6,14 @@ class JobsController < ApplicationController
     @search = params[:search_string]
     @search_column = params[:search_column]
     if @search_column == 'company'
-      @companies = Company.where("name ILIKE ?", "%#{@search}%")
+      @companies = Company.where('name ILIKE ?', '%#{@search}%')
       search = @companies.ids
     elsif @search_column == 'title'
-      search = "%#{@search}%"
+      search = '%#{@search}%'
     elsif @search_column == 'priority'
       search = (@search.to_i..10).to_a
     end
-    @jobs = current_user.jobs.search(@search_column, search).order(sort_column + " " + sort_direction).page(params[:page]).per(10)
+    @jobs = current_user.jobs.search(@search_column, search).order(sort_column + ' ' + sort_direction).page(params[:page]).per(10)
     respond_to do |format|
       format.html
       format.js
@@ -73,16 +73,16 @@ class JobsController < ApplicationController
   end
 
   private
+
   def sort_column
-    Job.column_names.include?(params[:sort]) ? params[:sort] : "closing_date"
+    Job.column_names.include?(params[:sort]) ? params[:sort] : 'closing_date'
   end
 
   def sort_direction
-    %w[ASC DESC].include?(params[:direction]) ? params[:direction] : "ASC"
+    %w[ASC DESC].include?(params[:direction]) ? params[:direction] : 'ASC'
   end
-private
+
   def job_params
     params.require(:job).permit(:title, :post_link, :closing_date, :posting_date, :priority, :contact_id, :resume, :cover_letter, :cover_letter_text)
   end
-
 end

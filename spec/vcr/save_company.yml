@@ -3,7 +3,7 @@ http_interactions:
 - request:
     method: get
     uri: https://api.fullcontact.com/v2/company/lookup.json?apiKey=<full contact api
-      key>&domain=www.airbnb.com
+      key>&domain=www.vacasa.com
     body:
       encoding: US-ASCII
       string: ''
@@ -24,11 +24,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 05 Oct 2016 17:56:32 GMT
+      - Mon, 07 Nov 2016 05:49:48 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '2031'
+      - '2223'
       Connection:
       - keep-alive
       Content-Encoding:
@@ -46,69 +46,73 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
-        v+NhFAAA
+        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
+        ws86O8zJ9z79Cwbf+6dYFgAA
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 17:56:33 GMT
+  recorded_at: Mon, 07 Nov 2016 05:49:48 GMT
 - request:
     method: get
-    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
+    uri: https://access.alchemyapi.com/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&dedup=true&end=now&outputMode=json&q.enriched.url.enrichedTitle.docSentiment.type=positive&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Vacasa,type=company%7C&rank=medium&return=enriched.url.title,enriched.url.url,enriched.url.author,enriched.url.publicationDate,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.concepts&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
       User-Agent:
-      - Ruby
+      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
       Host:
-      - gateway-a.watsonplatform.net
+      - access.alchemyapi.com
   response:
     status:
       code: 200
@@ -117,7 +121,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 05 Oct 2016 17:56:34 GMT
+      - Mon, 07 Nov 2016 05:49:49 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -127,7 +131,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Alchemyapi-Currentversion:
-      - 12.67a
+      - '12.71'
       X-Alchemyapi-Error-Msg:
       - daily-transaction-limit-exceeded
       X-Alchemyapi-Key:
@@ -144,5 +148,5 @@ http_interactions:
       encoding: UTF-8
       string: "{\r\n    \"status\": \"ERROR\",\r\n    \"statusInfo\": \"daily-transaction-limit-exceeded\"\r\n}\r\n"
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 17:56:34 GMT
+  recorded_at: Mon, 07 Nov 2016 05:49:49 GMT
 recorded_with: VCR 3.0.3

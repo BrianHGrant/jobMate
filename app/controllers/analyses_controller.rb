@@ -21,7 +21,8 @@ class AnalysesController < ApplicationController
   end
 
   private
-    def analysis_params
-      params.require(:analysis).permit(:text)
-    end
+
+  def analysis_params
+    params.require(:analysis).permit(:text)
+  end
 end

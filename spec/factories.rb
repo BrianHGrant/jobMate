@@ -3,7 +3,7 @@ FactoryGirl.define do
 
   end
   factory :user do
-    email 'test@test.com'
+    email 'test@example.com'
     password '4r56tRx'
   end
   factory :quote do
@@ -12,12 +12,9 @@ FactoryGirl.define do
   end
 
   factory :company do
-    name "Airbnb"
-    address '42 SW 5th Ave'
-    city 'Portland'
-    region 'OR'
+    name "Vacasa"
     category 'manufacturing'
-    domain 'airbnb.com'
+    domain 'vacasa.com'
     factory :company_with_contacts do
       transient do
         contacts_count 5

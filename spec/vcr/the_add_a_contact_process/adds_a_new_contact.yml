@@ -24,11 +24,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 05 Oct 2016 17:56:35 GMT
+      - Mon, 07 Nov 2016 05:49:51 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '2032'
+      - '2011'
       Connection:
       - keep-alive
       Content-Encoding:
@@ -46,69 +46,68 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
-        PKCEYRQAAA==
+        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
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 17:56:36 GMT
+  recorded_at: Mon, 07 Nov 2016 05:49:51 GMT
 - request:
     method: get
-    uri: https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&end=now&outputMode=json&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&return=enriched.url.url,enriched.url.title,enriched.url.author,enriched.url.docSentiment.score&start=now-7d
+    uri: https://access.alchemyapi.com/calls/data/GetNews?apikey=ea0ca979feb8d5927f7b2f683a6bbd3bd6ad05cf&count=25&dedup=true&end=now&outputMode=json&q.enriched.url.enrichedTitle.docSentiment.type=positive&q.enriched.url.enrichedTitle.entities.entity=%7Ctext=Airbnb,type=company%7C&rank=medium&return=enriched.url.title,enriched.url.url,enriched.url.author,enriched.url.publicationDate,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.concepts&start=now-7d
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
       User-Agent:
-      - Ruby
+      - rest-client/2.0.0 (darwin15.5.0 x86_64) ruby/2.3.1p112
       Host:
-      - gateway-a.watsonplatform.net
+      - access.alchemyapi.com
   response:
     status:
       code: 200
@@ -117,7 +116,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 05 Oct 2016 17:56:36 GMT
+      - Mon, 07 Nov 2016 05:49:51 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -127,7 +126,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Alchemyapi-Currentversion:
-      - 12.67a
+      - '12.71'
       X-Alchemyapi-Error-Msg:
       - daily-transaction-limit-exceeded
       X-Alchemyapi-Key:
@@ -144,5 +143,5 @@ http_interactions:
       encoding: UTF-8
       string: "{\r\n    \"status\": \"ERROR\",\r\n    \"statusInfo\": \"daily-transaction-limit-exceeded\"\r\n}\r\n"
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 17:56:36 GMT
+  recorded_at: Mon, 07 Nov 2016 05:49:51 GMT
 recorded_with: VCR 3.0.3

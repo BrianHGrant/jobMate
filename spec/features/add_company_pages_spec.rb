@@ -8,25 +8,21 @@ describe 'the add a company process', js:true do
       login_as(user, scope: :user)
       visit companies_path
       click_link "New Company"
-      fill_in 'Name', with: "Airbnb"
-      fill_in 'Address', with: "89 W. 24th St"
-      fill_in 'City', with: "Portland"
-      find('#company_domain').set("http://www.airbnb.com")
+      fill_in 'Name', with: "Vacasa"
+      find('#company_domain').set("http://www.vacasa.com")
       select 'Internet Publishing and Broadcasting'
       click_on "Save Company"
-      expect(page).to have_content "Airbnb"
+      expect(page).to have_content "Vacasa"
     end
   end
 
-  it "gives an error when no title or genre is entered" do
+  it "gives an error when no company name is entered" do
     FactoryGirl.create(:quote)
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit companies_path
     click_link "New Company"
     fill_in 'Name', :with => ""
-    fill_in 'Address', :with => "89 W. 24th St, New York, NY"
-    find('#company_domain').set("http://www.airbnb.com")
     select 'Internet Publishing and Broadcasting'
     click_on "Save Company"
     expect(page).to have_content 'errors'
