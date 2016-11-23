@@ -25,7 +25,12 @@ class CompaniesController < ApplicationController
     @company.user = current_user
     if @company.save
       flash[:notice] = 'Company successfully added!'
-      redirect_to company_path(@company)
+      binding.pry
+      if params[:add_status] == "true"
+        redirect_to new_company_status_path(@company)
+      else
+        redirect_to company_path(@company)
+      end
     else
       render :new
     end

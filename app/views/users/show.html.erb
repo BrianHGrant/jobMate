@@ -1,7 +1,31 @@
 <h1>Welcome back, <%= current_user.email %></h1>
 
-<div class="row user-main">
-  <div class="col-sm-5 well main-page-col">
+<div class="row">
+  <div class="col-sm-12 well">
+    <h2 class="center heading" id="heading">Your Overview:</h2>
+    <div class="row job-list heading">
+      <div class="col-sm-2 job-list-title">
+        <h3>Company</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Contact Type</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Applied</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Submitted</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Interview</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Offer</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-sm-5 well main-page-col">
     <h2>Your job prospects:</h2>
     <ul>
       <% @jobs.each do |job| %>
@@ -26,8 +50,8 @@
       <li><%= link_to contact.last_name+", "+contact.first_name, contact_path(contact)%></li>
     <%end%>
   </div>
+</div> -->
 </div>
-
 <div class="row quote">
   <div class="col-sm-8">
     <h5><%=@quotes.first.content%></h5>

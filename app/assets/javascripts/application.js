@@ -38,4 +38,12 @@ $(document).on('turbolinks:load', function() {
     $("#event_job_select").show();
     $("#event_contact_select").hide();
   })
+
+  $("#add_status").click(function() {
+    if( $(this).is(':checked')) {
+      console.log($("#add_status").val());
+    } else {
+      console.log($("#add_status").val());
+    }
+  });
 });

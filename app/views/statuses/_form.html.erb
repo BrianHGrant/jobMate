@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-sm-8 well">
+      <%= form_for [@company, @status] do |f| %>
+        <div class="form-group">
+          <%= f.label :contact_type %>
+          <%= f.select :contact_type do%>
+
+          <5 :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :post_link %>
+          <%= f.text_field :post_link, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :closing_date %>
+          <%= f.date_field :closing_date, :class => "form-control", :value => @job.closing_date %>
+        </div>
+        <div class="form-group">
+          <%= f.label :posting_date %>
+          <%= f.date_field :posting_date, :class => "form-control", :value => @job.posting_date%>
+        </div>
+        <div class="form-group">
+          <%= f.label :priority %>
+          <%= f.number_field :priority, :class => "form-control" %>
+        </div>
+        <% if @company.contacts.any? %>
+          <%=f.select(:contact_id, {:class => "contact-select"}) do%>
+            <% @company.contacts.each do |contact|%>
+              <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
+            <%end%>
+            <%=content_tag(:option, "No Contacts", value: "new-contact")%>
+          <%end%>
+        <%else%>
+          <p>No contacts - To associate job with a contact add contact to database then edit the job listing</p>
+        <%end%>
+        <%= f.submit "Save Job", :class => "btn btn-success" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

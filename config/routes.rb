@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :jobs, :except => :index do
       resources :analyses
     end
+    resources :statuses
   end
   resources :events
   resources :contacts
