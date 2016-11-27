@@ -2,6 +2,7 @@ class Company < ActiveRecord::Base
   validates_presence_of :name
   has_many :contacts
   has_many :jobs
+  has_many :statuses
   belongs_to :user
   before_create :get_company_info, :get_news
   serialize :news_response

@@ -22,6 +22,10 @@ textarea, input {
   color: black;
 }
 
+select {
+  color: black !important;
+}
+
 .devise-form {
   margin-left: 33%;
   padding: 10px;
@@ -42,7 +46,7 @@ select#company_category {
   margin-bottom: 2em;
 }
 
-#event_contact_select, #event_job_select {
+#event_contact_select, #event_job_select, #status_contact_form, #app_date {
   display: none;
 }
 

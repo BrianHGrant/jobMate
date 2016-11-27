@@ -1,40 +1,109 @@
 <div class="row">
   <div class="col-sm-8 well">
-      <%= form_for [@company, @status] do |f| %>
-        <div class="form-group">
-          <%= f.label :contact_type %>
-          <%= f.select :contact_type do%>
-
-          <5 :class => "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :post_link %>
-          <%= f.text_field :post_link, :class => "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :closing_date %>
-          <%= f.date_field :closing_date, :class => "form-control", :value => @job.closing_date %>
-        </div>
-        <div class="form-group">
-          <%= f.label :posting_date %>
-          <%= f.date_field :posting_date, :class => "form-control", :value => @job.posting_date%>
-        </div>
-        <div class="form-group">
-          <%= f.label :priority %>
-          <%= f.number_field :priority, :class => "form-control" %>
-        </div>
-        <% if @company.contacts.any? %>
-          <%=f.select(:contact_id, {:class => "contact-select"}) do%>
-            <% @company.contacts.each do |contact|%>
-              <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
-            <%end%>
-            <%=content_tag(:option, "No Contacts", value: "new-contact")%>
-          <%end%>
-        <%else%>
-          <p>No contacts - To associate job with a contact add contact to database then edit the job listing</p>
+    <h1>Status Update for <%= @status.company.name %></h1>
+    <hr>
+    <%= form_for [@company, @status] do |f| %>
+      <div class="form-group">
+        <%= f.hidden_field :company_id, value: @company.id %>
+        <%= f.label :contact_type %>
+        <%= f.select :contact_type do%>
+          <%=content_tag(:option, "Cold Contact(By You)")%>
+          <%=content_tag(:option, "Cold Contact(By Company)")%>
+          <%=content_tag(:option, "Recruiter")%>
+          <%=content_tag(:option, "Internal Job Posting")%>
+          <%=content_tag(:option, "Informational Interview")%>
+          <%=content_tag(:option, "Newtwork Contact")%>
         <%end%>
-        <%= f.submit "Save Job", :class => "btn btn-success" %>
-      <% end %>
-    <% end %>
+        <%= f.label "Attach Contact?"%>
+        <%= check_box_tag 'attach_contact', true%>
+        <%= hidden_field_tag 'attached_contact', false %>
+      </div>
+      <div class="form-group">
+        <%= f.label "Submitted Application?" %>
+        <%= f.select :applied do%>
+          <%= content_tag(:option, 'Select') %>
+          <% [['Yes', true], ['No', false]].each do |c| -%>
+            <%= content_tag(:option, c.first, value: c.last) %>
+          <% end %>
+        <%end%>
+      </div>
+      <div class="form-group" id="app_date">
+        <%= f.label :applied_date %>
+        <%= f.date_field :applied_date, class: "form-control", value: @status.applied_date %>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Interview?' %>
+        <%= f.select :interview do%>
+          <%=content_tag(:option, "No Contact")%>
+          <%=content_tag(:option, "Phone Interview")%>
+          <%=content_tag(:option, "In Person Interview")%>
+          <%=content_tag(:option, "Final Interview")%>
+        <%end%>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Offer?' %>
+        <%= f.select :offer do%>
+          <%=content_tag(:option, "No Offer")%>
+          <%=content_tag(:option, "Negotiating Offer")%>
+          <%=content_tag(:option, "Accepted Offer")%>
+          <%=content_tag(:option, "Declined Offer")%>
+          <%=content_tag(:option, "Undecided")%>
+        <%end%>
+      </div>
+      <div class="form-group">
+        <%= f.label :notes %>
+        <%= f.text_area :notes, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Active?' %>
+        <%= f.select :active do%>
+          <%= content_tag(:option, 'Select') %>
+          <% [['Yes', true], ['No', false]].each do |c| -%>
+            <%= content_tag(:option, c.first, value: c.last) %>
+          <% end %>
+        <%end%>
+      </div>
+  </div>
+  <div class="col-sm-offset-1 col-sm-3 well" id="status_contact_form">
+    <div class="btn btn-danger pull-right" id="clear"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+    <h3>Add Contact</h3>
+    <% if @company.contacts.any? %>
+      <%=f.select(:contact_id, {:class => "contact-select"}) do%>
+        <% @company.contacts.each do |contact|%>
+          <%=content_tag(:option, contact.last_name+", "+contact.first_name, value: contact.id)%>
+        <%end%>
+        <%=content_tag(:option, "Select Existing", value: nil)%>
+      <%end%>
+    <%end%>
+    <div class="form-group">
+      <%= f.label :last_name %>
+      <%= text_field_tag :last_name,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :first_name %>
+      <%= text_field_tag :first_name,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone %>
+      <%= telephone_field_tag :phone,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= email_field_tag :email,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :relationship %>
+      <%= text_field_tag :relationship,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :position %>
+      <%= text_field_tag :position,"", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :linkedIn %>
+      <%= text_field_tag :linkedIn,"", class: "form-control" %>
+    </div>
   </div>
 </div>
+<%= f.submit "Save Status", :class => "btn btn-success" %>
+<% end %>

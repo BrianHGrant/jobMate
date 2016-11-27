@@ -7,6 +7,7 @@
 //= require highcharts
 //= require chartkick
 
+
 $(document).on('turbolinks:load', function() {
   $("#paginator a").on("click", function() {
     $.getScript(this.href);
@@ -39,11 +40,34 @@ $(document).on('turbolinks:load', function() {
     $("#event_contact_select").hide();
   })
 
-  $("#add_status").click(function() {
+  $("#attach_contact").click(function() {
     if( $(this).is(':checked')) {
-      console.log($("#add_status").val());
+      $("#status_contact_form").show();
+      $("#attached_contact").val('true');
+      console.log($("#attached_contact").val());
     } else {
-      console.log($("#add_status").val());
+      $("#status_contact_form").hide();
+      $("#attached_contact").val('false');
+      console.log($("#attached_contact").val());
     }
+  })
+  $("#status_applied").change(function() {
+    var value = $("#status_applied").val();
+    console.log(value);
+    if(value === 'true') {
+      $("#app_date").show();
+    }
+    else {
+      $("#app_date").hide();
+    }
+  })
+  $("#clear").click(function() {
+    $("#last_name").val('');
+    $("#first_name").val('');
+    $("#phone").val('');
+    $("#email").val('');
+    $("#relationship").val('');
+    $("#position").val('');
+    $("#linkedIn").val('');
   });
 });

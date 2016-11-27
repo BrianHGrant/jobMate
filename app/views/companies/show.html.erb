@@ -13,6 +13,36 @@
   </div>
 </div>
 <div class="row">
+  <div class="col-sm-12 well">
+    <h2 class="center">Status</h2>
+    <hr>
+    <div class="row job-list heading">
+      <div class="col-sm-2 job-list-title">
+        <h3>Contact Type</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Contact</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Date Applied</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Interview</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Offer</h3>
+      </div>
+      <div class="col-sm-2 job-list-title">
+        <h3>Notes</h3>
+      </div>
+    </div>
+    <div class="jobs">
+      <%= render 'statuses' %>
+    </div>
+    <%= link_to 'Status Update', new_company_status_path(@company), :class => "btn btn-primary" %>
+  </div>
+</div>
+<div class="row">
   <div class="col-sm-6">
     <div class="well">
       <h2 class="center">Corporate Info</h2>

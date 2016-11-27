@@ -1,0 +1,15 @@
+<% if @company.statuses.any? %>
+  <% @company.statuses.each do |status| %>
+    <%if status.active == 'true' %>
+      <div class="row job-list alert-high">
+    <%else%>
+      <div class="row job-list">
+    <%end%>
+        <div class="col-sm-3 job-list-title">
+          <h4 class="jobs_listing"><span class="small-screen-heading"><%= status.contact_type %></span></h4>
+        </div>
+      </div>
+  <%end%>
+<%else%>
+  <h4>You have no jobs saved, add a company to get started</h4>
+<%end%>

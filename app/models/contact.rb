@@ -1,6 +1,6 @@
 class Contact < ActiveRecord::Base
   # includes
-
+  belongs_to :status, optional: true
   belongs_to :company, optional: true
   belongs_to :user
   has_many :jobs
